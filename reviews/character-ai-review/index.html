@@ -4,10 +4,134 @@
 <title>Character.AI Review 2025 — SFW Roleplay, c.ai+ Pricing & Features</title>
 <meta name="description" content="Character AI review: SFW roleplay platform with a huge character library, rooms, polished apps, and c.ai+ priority access. Free tier available."/>
 <link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/mobile-fixed.css"/>
 <link rel="preload" as="image" href="/assets/hero.webp"/>
+<script>
+// Unified Mobile Navigation - Site-wide Fix
+(function() {
+  'use strict';
+
+  function initMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle || !nav) return;
+
+    // Ensure burger lines are properly structured
+    if (navToggle.children.length === 0) {
+      navToggle.innerHTML = `
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      `;
+    }
+
+    // Ensure menu is closed by default
+    body.classList.remove('nav-open');
+    nav.classList.remove('nav-open');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    body.style.overflow = '';
+
+    // Toggle function
+    function toggleMenu() {
+      const isOpen = body.classList.contains('nav-open');
+      
+      if (isOpen) {
+        // Close menu
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      } else {
+        // Open menu
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden';
+      }
+    }
+
+    // Click handler for burger button
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking nav links
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+
+    // Close menu when clicking outside (on the nav overlay itself)
+    nav.addEventListener('click', function(e) {
+      if (e.target === nav) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+  }
+
+  // Header scroll effect
+  function initHeaderScroll() {
+    const header = document.querySelector('#hdr');
+    if (!header) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          header.classList.toggle('fixed', window.scrollY > 8);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // Initialize when DOM is ready
+  function init() {
+    initMobileNav();
+    initHeaderScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "assets/character-ai-logo.webp"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "ChatFAI"}, "author": {"@type": "Organization", "name": "AI Review Hub"}, "reviewRating": {"@type": "Rating", "ratingValue": 3.7, "bestRating": 5, "worstRating": 1}, "datePublished": "2025-01-01", "publisher": {"@type": "Organization", "name": "AI Review Hub"}}</script>
-<script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "/reviews/"}, {"@type": "ListItem", "position": 3, "name": "ChatFAI Review", "item": "/reviews/character-ai-review/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Character.AI"}, "author": {"@type": "Organization", "name": "AI Review Hub"}, "reviewRating": {"@type": "Rating", "ratingValue": 3.7, "bestRating": 5, "worstRating": 1}, "datePublished": "2025-01-01", "publisher": {"@type": "Organization", "name": "AI Review Hub"}}</script>
+<script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "/reviews/"}, {"@type": "ListItem", "position": 3, "name": "Character.AI Review", "item": "/reviews/character-ai-review/"}]}</script>
 
 <!-- Load review-specific styles -->
 <script>
@@ -26,8 +150,6 @@ window.addEventListener('load',()=>{
   });
 });
 </script>
-
-  <link rel="stylesheet" href="/css/aihub.v8.patch.css">
 </head><body>
 <header class="header" id="hdr"><div class="container header__in">
 <a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
@@ -48,181 +170,82 @@ window.addEventListener('load',()=>{
 <div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
 
 <main class="container">
-  <div class="review-hero">
-    <nav class="review-meta">
-      <a href="/">Home</a> › <a href="/reviews/">Reviews</a> › Character.AI
-    </nav>
-    
-    <h1 class="h1 review-title">Character.AI Review 2025: Massive SFW Community, Fast Onboarding & Filtered Roleplay</h1>
-    
-    <div class="review-banner">
-      <img src="/assets/character-ai-logo.webp" 
-           alt="Character.AI companion review" 
-           width="1400" height="800" 
-           loading="eager" 
-           class="banner review-compact"/>
-    </div>
-    
-    <div class="review-score">
-      <div class="score-main">
-        <div class="score-number">80</div>
-        <div class="score-label">Editor Score</div>
-      </div>
-      <div class="score-details">
-        <div class="score-price">$9.99/month</div>
-        <div class="score-badge">
-          <span>🎯</span>
-          <span>SFW Leader</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section class="pros-cons">
-    <div class="pros-card">
-      <h2>Pros</h2>
-      <ul>
-        <li>Huge SFW character ecosystem — Millions of community and official characters for instant discovery across genres and fandoms.</li>
-        <li>Fast onboarding & polished apps — Clean iOS/Android apps, web sync, and notifications make daily chatting effortless</li>
-        <li>Beginner-friendly character creation — Simple builder (greeting + examples + description) lets anyone publish convincing personas.</li>
-        <li>Rooms & multi-character chats — Run group scenes or combine personalities for livelier conversations.</li>
-        <li>Free to start with strong baseline features — Great entry point before deciding on c.ai+ for priority and extras.</li>
-      </ul>
-    </div>
-    <div class="cons-card">
-      <h2>Cons</h2>
-      <ul>
-        <li>Strict NSFW filters — Not suitable for explicit adult roleplay; moderation can interrupt borderline topics.</li>
-        <li>Variable character quality — Community creations range from excellent to basic; discovery and curation are required.</li>
-        <li>Limited deep customization — Less control over raw system prompts/behavior rules than power-user platforms.</li>
-        <li>Rate limits for free users — Queues/cooldowns during peak hours unless you upgrade to c.ai+.</li>
-        <li>No official open API for custom clients — Power users may miss integrations available on API-based services.</li>
-      </ul>
-    </div>
+  <section class="hero">
+    <h1 class="h1">Character.AI Review</h1>
+    <p class="lead">SFW roleplay platform with huge character library, rooms, and c.ai+ pricing.</p>
   </section>
-
-  <!-- Rating Breakdown -->
-  <section class="section">
-    <h2 class="h2">Detailed Rating Breakdown</h2>
-    <div class="rating-breakdown">
-      <div class="rating-item">
-        <div class="rating-label">Character Interaction</div>
-        <div class="rating-bar">
-          <div class="rating-fill" style="width: 76%;"></div>
-        </div>
-        <div class="rating-value">76/100</div>
-      </div>
-      <div class="rating-item">
-        <div class="rating-label">Fictional Character Focus</div>
-        <div class="rating-bar">
-          <div class="rating-fill" style="width: 90%;"></div>
-        </div>
-        <div class="rating-value">90/100</div>
-      </div>
-      <div class="rating-item">
-        <div class="rating-label">Ease of Use</div>
-        <div class="rating-bar">
-          <div class="rating-fill" style="width: 86%;"></div>
-        </div>
-        <div class="rating-value">86/100</div>
-      </div>
-      <div class="rating-item">
-        <div class="rating-label">Value for Money</div>
-        <div class="rating-bar">
-          <div class="rating-fill" style="width: 82%;"></div>
-        </div>
-        <div class="rating-value">82/100</div>
-      </div>
-      <div class="rating-item">
-        <div class="rating-label">Feature Completeness</div>
-        <div class="rating-bar">
-          <div class="rating-fill" style="width: 70%;"></div>
-        </div>
-        <div class="rating-value">70/100</div>
-      </div>
-      <div class="rating-item">
-        <div class="rating-label">AI Sophistication</div>
-        <div class="rating-bar">
-          <div class="rating-fill" style="width: 74%;"></div>
-        </div>
-        <div class="rating-value">74/100</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="h2">Alternatives & Comparisons</h2>
-    <div class="alternatives-grid">
-      <article class="alternative-card">
-        <h3><a href="/comparisons/lovescape-vs-replika/">Lovescape vs Replika</a></h3>
-        <p class="lead" style="font-size:14px">Compare Replika's fictional character focus with Lovescape's comprehensive companion platform.</p>
-      </article>
-      <article class="alternative-card">
-       <h3><a href="/reviews/crushon-ai-review/">CrushOn.AI Review</a></h3>
-        <p class="lead" style="font-size:14px">Alternative platform with larger character library and more advanced roleplay capabilities.</p>
-      </article>
-      <article class="alternative-card">
-        <h3><a href="/reviews/janitorai-review/">JanitorAI Alternative</a></h3>
-        <p class="lead" style="font-size:14px">Free platform with more extensive character creation and customization options.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Share Section -->
-  
 
   <section class="section card">
-    <h2 class="h2">What Is Character.AI?</h2>
-    <p class="lead">Character.AI is one of the largest AI companion & roleplay platforms, built around a huge library of user-created characters and fast, mobile-first chatting. It’s SFW-focused with strict content filters, making it a safe place to try roleplay, creative conversations, tutoring, or fandom chats. A c.ai+ subscription removes queue limits and unlocks extras; the free tier lets you explore most basics.</p>
-    <h2>Key Features</h2>
-<ul>
-<li>Enormous character library: millions of user and official characters across romance, slice-of-life, fandoms, tutors, coaches, and more.</li>
-<li>Character builder: description, example dialogues, greeting, and keywords to steer behavior; easy for beginners to publish.</li>
-<li>Rooms &amp; group chats: chat with multiple characters at once or invite friends for shared scenes.</li>
-<li>Mobile apps &amp; web: polished iOS/Android apps with quick notifications and sync.</li>
-</ul>
-<h2>Roleplay &amp; Conversation Quality</h2>
-<p>For SFW roleplay and casual storytelling, Character.AI is reliable: pacing is natural, characters generally keep tone, and sessions remain coherent with recent context. Because most content is community-made, quality varies&mdash;the best creators feel great out of the box, others need manual steering. Hardcore, unfiltered, or explicit RP isn&rsquo;t this platform&rsquo;s focus.</p>
-<h2>Safety &amp; Moderation</h2>
-<p>The service is strictly moderated. Explicit NSFW content is blocked; filters can interrupt borderline scenes. That&rsquo;s a pro for safety-first users, but a con for adults seeking fully unfiltered experiences.</p>
-<h2>Pricing &amp; Value</h2>
-<p>You can start free with some rate limits (queues/cooldowns at peak hours). c.ai+ offers priority access and early features (price varies by region/store). For SFW users who want breadth and convenience, the value is excellent.</p>
-<h2>Who Is Character.AI Best For?</h2>
-<ul>
-<li>Users who want a safe, SFW-first companion with tons of ready characters.</li>
-<li>Beginners who value an easy character creator and polished mobile apps.</li>
-<li>Fans of group/room chats and community discovery over deep, unfiltered RP.</li>
-</ul>
+    <h2 class="h2">Character.AI Overview</h2>
+    <p>Character.AI is a popular SFW-focused roleplay platform with thousands of community-created characters, group rooms, and polished mobile apps. The platform offers a free tier with message limits and c.ai+ subscription for priority access and longer conversations.</p>
+    
+    <div class="verdict">
+      <h3>Our Rating: 3.7/5</h3>
+      <div class="bullets">
+        <div class="bullet good">✅ Huge character library</div>
+        <div class="bullet good">✅ Clean, polished interface</div>
+        <div class="bullet good">✅ Group chat rooms</div>
+        <div class="bullet good">✅ Strong mobile apps</div>
+        <div class="bullet bad">❌ Heavy SFW content filtering</div>
+        <div class="bullet bad">❌ Message limits on free tier</div>
+        <div class="bullet bad">❌ No NSFW content allowed</div>
+        <div class="bullet bad">❌ Can be slow during peak times</div>
+      </div>
+    </div>
   </section>
 
-  <section class="section faq">
-    <h2 class="h2">Frequently Asked Questions</h2>
-    <details>
-      <summary>Is Character.AI free to use?</summary>
-      <p>Yes. The free tier lets you chat and create characters with some rate limits. c.ai+ adds priority access and extra perks; pricing may vary by region/store.</p>
-    </details>
-    <details>
-      <summary>Does Character.AI allow NSFW content?</summary>
-      <p>No. Character.AI is SFW by design with strict moderation. Explicit adult/erotic roleplay is blocked. If you want fully unfiltered RP, consider NSFW-first alternatives.</p>
-    </details>
-    <details>
-      <summary>Can I create and share my own characters?</summary>
-      <p>Absolutely. Use the Character Builder to set a description, greeting, and example messages, add tags, and publish. Your characters can be private or shared with the community</p>
-    </details>
-    <details>
-      <summary>What are Rooms and group chats?</summary>
-      <p>Rooms let you chat with multiple characters simultaneously—or invite friends—so scenes feel dynamic and collaborative.</p>
-    </details>
-    <details>
-      <summary>Is there a mobile app?</summary>
-      <p>Yes. Character.AI has iOS and Android apps with notifications and sync; most users prefer mobile for speed and convenience.</p>
-    </details>
-    <details>
-      <summary>How private are my conversations?</summary>
-      <p>Chats are stored to power features like memory and safety. You can manage or delete chats in settings. As with any online service, avoid sharing sensitive personal or financial data and review Character.AI’s Privacy Policy and Terms for details</p>
-    </details>
+  <section class="section card">
+    <h2 class="h2">Character.AI Features</h2>
+    <ul>
+      <li><strong>Character Library:</strong> Thousands of community-created characters across genres</li>
+      <li><strong>Character Creation:</strong> Build detailed characters with personality descriptions</li>
+      <li><strong>Group Rooms:</strong> Multi-character conversations and roleplay scenarios</li>
+      <li><strong>Mobile Apps:</strong> Polished iOS and Android applications</li>
+      <li><strong>Voice Chat:</strong> Some characters support voice conversations</li>
+      <li><strong>Memory:</strong> Characters remember conversation context across sessions</li>
+    </ul>
+  </section>
+
+  <section class="section card">
+    <h2 class="h2">Pricing & Plans</h2>
+    <ul>
+      <li><strong>Free Tier:</strong> Limited messages, queue during peak times</li>
+      <li><strong>c.ai+ ($9.99/month):</strong> Priority access, longer conversations, faster response times</li>
+      <li><strong>Annual Plans:</strong> Discounted yearly subscriptions available</li>
+    </ul>
+  </section>
+
+  <section class="section card">
+    <h2 class="h2">Who Is Character.AI For?</h2>
+    <p>Character.AI is ideal for users seeking SFW roleplay experiences, creative writing practice, or entertainment through character interactions. The platform excels for:</p>
+    <ul>
+      <li>Users who prefer completely SFW content</li>
+      <li>Creative writers exploring character development</li>
+      <li>Fans of specific fandoms with dedicated characters</li>
+      <li>Those wanting group roleplay experiences</li>
+      <li>Mobile-first users who chat on-the-go</li>
+    </ul>
+  </section>
+
+  <section class="section card">
+    <h2 class="h2">Character.AI Alternatives</h2>
+    <p>If Character.AI doesn't meet your needs, consider these alternatives:</p>
+    <ul>
+      <li><strong><a href="/reviews/lovescape-review/">Lovescape</a></strong> - Premium romantic AI with NSFW options</li>
+      <li><strong><a href="/reviews/crushon-ai-review/">CrushOn.AI</a></strong> - Unfiltered character chat with NSFW support</li>
+      <li><strong><a href="/reviews/janitorai-review/">JanitorAI</a></strong> - Community characters with API flexibility</li>
+      <li><strong><a href="/reviews/candy-ai-review/">Candy.AI</a></strong> - Custom AI companions with visual generation</li>
+    </ul>
+  </section>
+
+  <section class="section card">
+    <h2 class="h2">Final Verdict</h2>
+    <p>Character.AI excels as a SFW-focused platform with an impressive character library and polished user experience. While the heavy content filtering and message limits may frustrate some users, it's an excellent choice for those seeking clean, creative roleplay experiences. The c.ai+ subscription addresses most limitations for serious users.</p>
+    
+    <p><strong>Best for:</strong> SFW roleplay, creative writing, fandom interactions, mobile users</p>
+    <p><strong>Skip if:</strong> You need NSFW content, want unlimited free messaging, or prefer less restrictive platforms</p>
   </section>
 </main>
-    
-<footer class="container"><p>© 2025 AI Review Hub — fast, accessible reviews of AI characters.</p></footer>
+
+<footer class="container"><p>© 2025 AI Review Hub — honest reviews of AI companion platforms.</p></footer>
 </body></html>
