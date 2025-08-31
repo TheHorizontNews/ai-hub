@@ -8,71 +8,7 @@
 <link rel="stylesheet" href="/css/mobile-fixed.css"/>
 <link rel="stylesheet" href="/css/comparisons-enhanced.css"/>
 <link rel="preload" as="image" href="/assets/hero.webp"/>
-<script defer src="/js/app.js"></script>
-<script defer src="/js/mobile-fixed.js"></script>
-
-<!-- Fallback mobile navigation script -->
-<script>
-(function() {
-  function initMobileNav() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    const body = document.body;
-    
-    if (!navToggle || !nav) return;
-
-    // Toggle function
-    function toggleMenu() {
-      const isOpen = body.classList.contains('nav-open');
-      
-      if (isOpen) {
-        body.classList.remove('nav-open');
-        nav.classList.remove('nav-open');
-        navToggle.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-      } else {
-        body.classList.add('nav-open');
-        nav.classList.add('nav-open');
-        navToggle.classList.add('active');
-        navToggle.setAttribute('aria-expanded', 'true');
-      }
-    }
-
-    // Click handler
-    navToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      toggleMenu();
-    });
-
-    // Close on nav link click
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function() {
-        body.classList.remove('nav-open');
-        nav.classList.remove('nav-open');
-        navToggle.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
-        body.classList.remove('nav-open');
-        nav.classList.remove('nav-open');
-        navToggle.classList.remove('active');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMobileNav);
-  } else {
-    initMobileNav();
-  }
-})();
-</script>
+<script defer src="/js/mobile-nav-unified.js"></script>
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "/", "logo": "assets/lovescape.webp"}</script>
 <script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Comparisons", "item": "/comparisons/"}]}</script>
