@@ -46,7 +46,129 @@ main{padding-block:30px}
 @media(max-width:980px){.hero{grid-template-columns:1fr}}
 </style>
 
-<script defer src="/js/mobile-nav-unified.js"></script>
+<script>
+// Unified Mobile Navigation - Inline Version
+(function() {
+  'use strict';
+
+  function initMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle || !nav) return;
+
+    // Ensure burger lines are properly structured
+    if (navToggle.children.length === 0) {
+      navToggle.innerHTML = `
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      `;
+    }
+
+    // Ensure menu is closed by default
+    body.classList.remove('nav-open');
+    nav.classList.remove('nav-open');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    body.style.overflow = '';
+
+    // Toggle function
+    function toggleMenu() {
+      const isOpen = body.classList.contains('nav-open');
+      
+      if (isOpen) {
+        // Close menu
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      } else {
+        // Open menu
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden';
+      }
+    }
+
+    // Click handler for burger button
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking nav links
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+
+    // Close menu when clicking outside (on the nav overlay itself)
+    nav.addEventListener('click', function(e) {
+      if (e.target === nav) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+  }
+
+  // Header scroll effect
+  function initHeaderScroll() {
+    const header = document.querySelector('#hdr');
+    if (!header) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          header.classList.toggle('fixed', window.scrollY > 8);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // Initialize when DOM is ready
+  function init() {
+    initMobileNav();
+    initHeaderScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "assets/lovescape.webp"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "/reviews/lovescape-review/", "name": "Lovescape Review"}, {"@type": "ListItem", "position": 2, "url": "/reviews/replika-ai-review/", "name": "Replika AI Review"}, {"@type": "ListItem", "position": 3, "url": "/reviews/crushon-ai-review/", "name": "CrushOn.AI Review"}, {"@type": "ListItem", "position": 4, "url": "/reviews/janitorai-review/", "name": "JanitorAI Review"}], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.2", "reviewCount": "48"}}</script>
 <script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}]}</script>
