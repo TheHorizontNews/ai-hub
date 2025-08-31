@@ -146,43 +146,7 @@ window.addEventListener('load',()=>{
 });
 </script>
 
-<script defer src="/js/mobile-nav-unified.js"></script>
 
-<!-- Debug mobile menu -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    const body = document.body;
-    
-    if (navToggle && nav) {
-      console.log('Debug: Adding mobile menu listener');
-      
-      navToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        console.log('Debug: Burger menu clicked');
-        
-        const isOpen = body.classList.contains('nav-open');
-        
-        if (isOpen) {
-          body.classList.remove('nav-open');
-          nav.classList.remove('nav-open');
-          navToggle.classList.remove('active');
-          body.style.overflow = '';
-          console.log('Debug: Menu closed');
-        } else {
-          body.classList.add('nav-open');
-          nav.classList.add('nav-open');
-          navToggle.classList.add('active');
-          body.style.overflow = 'hidden';
-          console.log('Debug: Menu opened');
-        }
-      });
-    }
-  }, 1000);
-});
-</script>
   
 </head><body>
   <header class="header" id="hdr"><div class="container header__in">
