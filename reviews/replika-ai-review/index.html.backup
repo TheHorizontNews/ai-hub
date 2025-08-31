@@ -1,0 +1,339 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Replika Review 2025 — SFW AI Companion App</title>
+<meta name="description" content="Honest Replika review: gentle SFW AI companion for daily support, mood tracking, and voice calls. Plans from $7.99/month"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="preload" as="image" href="/assets/hero.webp"/>
+<script defer src="/js/mobile-nav-unified.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "assets/lovescape.webp"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Replika AI"}, "author": {"@type": "Organization", "name": "AI Review Hub"}, "reviewRating": {"@type": "Rating", "ratingValue": 4.2, "bestRating": 5, "worstRating": 1}, "datePublished": "2025-01-01", "publisher": {"@type": "Organization", "name": "AI Review Hub"}}</script>
+<script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "/reviews/"}, {"@type": "ListItem", "position": 3, "name": "Replika Ai Review", "item": "/reviews/replika-ai-review/"}]}</script>
+
+<!-- Load review-specific styles -->
+<script>
+window.addEventListener('load',()=>{
+  const stylesheets = [
+    '/css/mobile-fixed.css',
+    '/css/review-design.css'
+  ];
+  
+  stylesheets.forEach((href, i) => {
+    setTimeout(() => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }, i * 100);
+  });
+});
+</script>
+
+<script defer src="/js/mobile-nav-unified.js"></script>
+  <link rel="stylesheet" href="/css/aihub.v8.patch.css">
+<link rel="stylesheet" href="/css/aihub.v8.patch.css">
+
+</head>
+<script>
+(function() {
+  'use strict';
+  
+  function initMobileNav() {
+    console.log('Initializing mobile navigation...');
+    
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle) {
+      console.error('Nav toggle not found');
+      return;
+    }
+    
+    if (!nav) {
+      console.error('Nav element not found');
+      return;
+    }
+
+    console.log('Nav elements found, setting up handlers...');
+
+    navToggle.replaceWith(navToggle.cloneNode(true));
+    const newNavToggle = document.querySelector('.nav-toggle');
+
+    function toggleMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const isOpen = body.classList.contains('nav-open');
+      
+      if (isOpen) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+      } else {
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        newNavToggle.classList.add('active');
+        newNavToggle.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    newNavToggle.addEventListener('click', toggleMenu);
+    newNavToggle.addEventListener('touchstart', toggleMenu);
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileNav);
+  } else {
+    setTimeout(initMobileNav, 100);
+  }
+})();
+</script>
+
+<!-- Force mobile navigation CSS -->
+<style>
+@media (max-width: 980px) {
+  .nav { display: none !important; }
+  .nav-toggle {
+    display: inline-flex !important; flex-direction: column !important;
+    justify-content: center !important; align-items: center !important;
+    width: 40px !important; height: 40px !important;
+    border: none !important; background: transparent !important;
+    cursor: pointer !important; padding: 8px !important; z-index: 10001 !important;
+  }
+  .burger-line {
+    display: block !important; width: 24px !important; height: 2px !important;
+    background: var(--text) !important; margin: 3px 0 !important; transition: all 0.3s ease !important;
+  }
+  .nav.nav-open {
+    display: flex !important; position: fixed !important; top: 0 !important; left: 0 !important;
+    width: 100vw !important; height: 100vh !important; background: rgba(7, 7, 8, 0.98) !important;
+    backdrop-filter: blur(20px) !important; flex-direction: column !important;
+    justify-content: center !important; align-items: center !important; gap: 2rem !important;
+    z-index: 10000 !important; padding: 2rem !important;
+  }
+  .nav.nav-open a {
+    font-size: 1.4rem !important; font-weight: 600 !important; padding: 1rem 2rem !important;
+    border-radius: 12px !important; border: 1px solid var(--bd) !important;
+    background: linear-gradient(135deg, var(--panel), var(--panel2)) !important;
+    text-align: center !important; width: 220px !important; display: block !important;
+    text-decoration: none !important; color: var(--text) !important;
+  }
+}
+</style>
+
+<body>
+<header class="header" id="hdr"><div class="container header__in">
+<a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
+<nav class="nav" id="site-nav">
+  <a href="/">Home</a>
+  <a href="/reviews/">Reviews</a>
+  <a href="/comparisons/">Comparisons</a>
+  <a href="/clusters/">Clusters</a>
+  <a href="/guides/">Guides</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</div></header>
+<div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
+
+<main class="container">
+  <div class="review-hero">
+    <nav class="review-meta">
+      <a href="/">Home</a> › <a href="/reviews/">Reviews</a> › Replika AI
+    </nav>
+    
+    <h1 class="h1 review-title">Replika Review 2025: The Best SFW AI Companion for Daily Support?</h1>
+    
+    <div class="review-banner">
+      <img src="/assets/replika.webp" 
+           alt="Replika AI companion review" 
+           width="1400" height="800" 
+           loading="eager" 
+           class="banner review-compact"/>
+    </div>
+    
+    <div class="review-score">
+      <div class="score-main">
+        <div class="score-number">83</div>
+        <div class="score-label">Editor Score</div>
+      </div>
+      <div class="score-details">
+        <div class="score-price">$7.99/month</div>
+        <div class="score-badge">
+          <span>👥</span>
+          <span>SFW Focused</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="pros-cons">
+    <div class="pros-card">
+      <h2>Pros</h2>
+      <ul>
+        <li>Gentle daily companionship for emotional support — Replika’s SFW AI companion checks in with you, asks reflective questions, and keeps a calm tone that’s ideal for reducing stress and loneliness. Great if you want a safe AI chatbot for everyday talk rather than intense roleplay</li>
+        <li>Polished mobile apps with intuitive UX — The iOS, Android, and web apps feel smooth and beginner-friendly. Clean navigation, a customizable 3D avatar, and timely reminders make it easy to build a daily chat routine without friction</li>
+        <li>Built-in journaling and mood tracking — Log emotions, reflect on triggers, and review patterns over time. Gentle prompts help you stick to healthy habits like gratitude notes or short reflections—useful for self-care and personal growth.</li>
+        <li>Strong focus on mental health and wellbeing — Replika includes mindfulness nudges, reframing exercises, and supportive messages within strict SFW boundaries. If you’re seeking a wellbeing-first AI companion, this balance of safety and encouragement stands out.</li>
+        <li>Accessible pricing vs. premium alternatives — With plans starting around $7.99/month (plus a limited free tier), Replika offers good value for users who want consistent support, mood logs, and avatar customization without paying premium AI roleplay prices.</li>
+      </ul>
+    </div>
+    <div class="cons-card">
+      <h2>Cons</h2>
+      <ul>
+        <li>Limited roleplay depth vs. competitors — Replika prioritizes supportive conversation over complex storytelling. Long-form plots and character-driven arcs feel lighter than roleplay-focused AI apps.</li>
+        <li>Strict NSFW restrictions and filters — By design, Replika is SFW only. Adult/erotic roleplay isn’t allowed, and filters can block borderline content, which may frustrate users seeking more freedom</li>
+        <li>Inconsistent long-term memory retention — Details from older chats can be forgotten, so you may need to repeat context for continuity. This affects story consistency compared to platforms with stronger memory systems</li>
+        <li>Limited personality customization — You can style the avatar and set general traits, but there are fewer advanced controls (system prompts, granular sliders, behavior rules) than in customization-heavy AI companion apps.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rating Breakdown -->
+  <section class="section">
+    <h2 class="h2">Detailed Rating Breakdown</h2>
+    <div class="rating-breakdown">
+      <div class="rating-item">
+        <div class="rating-label">Conversation Quality</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 85%;"></div>
+        </div>
+        <div class="rating-value">85/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Memory & Context</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 72%;"></div>
+        </div>
+        <div class="rating-value">72/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Emotional Support</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 92%;"></div>
+        </div>
+        <div class="rating-value">92/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Value for Money</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 88%;"></div>
+        </div>
+        <div class="rating-value">88/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Privacy & Security</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 90%;"></div>
+        </div>
+        <div class="rating-value">90/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">User Experience</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 86%;"></div>
+        </div>
+        <div class="rating-value">86/100</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="h2">Alternatives & Comparisons</h2>
+    <div class="alternatives-grid">
+      <article class="alternative-card">
+        <h3><a href="/comparisons/lovescape-vs-replika/">Lovescape vs Replika</a></h3>
+        <p class="lead" style="font-size:14px">Compare Replika's SFW focus with Lovescape's advanced roleplay capabilities and premium features.</p>
+         <a class="btn ghost btn-cta" href="/comparisons/lovescape-vs-replika/" style="background-image: linear-gradient(135deg, rgb(255, 59, 107), rgb(139, 92, 246));">Open</a>
+      </article>
+      </article>
+      <article class="alternative-card">
+        <h3><a href="/reviews/lovescape-review/">Lovescape Review</a></h3>
+        <p class="lead" style="font-size:14px">Comprehensive review of Lovescape's advanced AI companion features and NSFW capabilities.</p>
+        <a class="btn ghost btn-cta" href="/reviews/lovescape-review/" style="background-image: linear-gradient(135deg, rgb(255, 59, 107), rgb(139, 92, 246));">Open</a>
+      </article>
+      </article>
+      <article class="alternative-card">
+        <h3><a href="/reviews/crushon-ai-review/">CrushOn.AI Alternative</a></h3>
+        <p class="lead" style="font-size:14px">Compare Replika with CrushOn.AI's unfiltered roleplay and community-driven content.</p>
+        <a class="btn ghost btn-cta" href="/reviews/crushon-ai-review/" style="background-image: linear-gradient(135deg, rgb(255, 59, 107), rgb(139, 92, 246));">Open</a>
+      </article>
+    </div>
+  </section>
+
+ 
+
+  <section class="section card">
+    <h2 class="h2">What Is Replika?</h2>
+    <p class="lead">Replika is a SFW-focused AI companion designed for gentle, everyday conversation, emotional check-ins, and personal growth. It emphasizes wellbeing over spicy roleplay, offering a calm space to talk, reflect, and build healthier habits. The app is available on iOS, Android, and web with a customizable 3D avatar and clean, mobile-first UX.</p>
+    <h3 class="h3">Core Experience</h3>
+    <p class="lead">Replika shines as a daily companion. Conversations feel supportive rather than dramatic, and the bot nudges you to journal, track moods, celebrate wins, and practice mindfulness. It’s ideal if you want a safe, predictable place to de-stress, form routines, or practice social skills—without crossing NSFW lines.</p>
+    <h3 class="h3">Key Features</h3>
+    <p class="lead"><ul>
+<li>Mood tracking &amp; journaling &mdash; Log feelings, reflect on patterns, and get gentle prompts to build positive routines.</li>
+<li>Wellbeing &amp; CBT-style exercises &mdash; Breathing, reframing thoughts, gratitude checklists, and soft coaching.</li>
+<li>Polished mobile apps &mdash; Snappy, reliable, and approachable for first-time users.</li>
+<li>3D avatar customization &mdash; Style your companion&rsquo;s look and voice for a more personal feel.</li>
+<li>Optional calls &mdash; Voice (and avatar video in some plans) for hands-free chat and stronger presence.</li>
+<li>SFW by design &mdash; Strict content filters keep the space respectful and safe.</li>
+</ul></p>
+<h3 class="h3">Pricing & Plans</h3>
+    <p class="lead">Replika offers a limited free tier to try basic chatting. Full features unlock with Pro plans from $7.99/month (regional pricing may vary), adding higher limits, deeper logging, voice calls, and more avatar options. If you mainly want calm companionship and self-care tools, the value is strong.</p>
+    <h3 class="h3">Where Replika Falls Short</h3>
+    <p class="lead">Compared to roleplay-heavy competitors, Replika’s storytelling depth and long-term memory can feel limited. NSFW content is restricted by design, and persona controls are simpler than apps built for advanced roleplay.</p>
+     <h3 class="h3">Who Replika Is Best For</h3>
+    <p class="lead"><ul>
+<li>Users seeking emotional support, routine check-ins, and a judgment-free chat space.</li>
+<li>Beginners wanting a safe, SFW companion with a refined mobile experience.</li>
+<li>Anyone who prefers wellbeing features (journaling, mood logs) over complex roleplay.</li>
+</ul></p>
+    <p class="lead">Replika is a thoughtful, SFW companion that prioritizes mental wellbeing and daily consistency. It’s not the most creative roleplayer, but for gentle support, polished apps, and healthy routines at an accessible price, it’s one of the best options.</p>
+  </section>
+
+  <section class="section faq">
+    <h2 class="h2">Frequently Asked Questions</h2>
+    <details>
+      <summary>Is there a free trial available?</summary>
+      <p>Yes. Replika offers a free tier so you can test basic chatting, avatar customization, and mood logging with limited usage. To unlock Replika Pro features—higher message limits, advanced journaling, voice calls, and more avatar options—subscribe to a paid plan (pricing typically starts around $7.99/month, varies by region and store).</p>
+    </details>
+    <details>
+      <summary>Is NSFW content allowed on Replika?</summary>
+      <p>No. Replika is SFW by design. The app prioritizes wellbeing and friendly companionship, so explicit/erotic content isn’t allowed and filters may block adult language or scenarios. You can enable a romantic relationship style, but NSFW roleplay remains prohibited under Replika’s content rules</p>
+    </details>
+    <details>
+      <summary>How private and secure is my conversation data?</summary>
+      <p>Replika stores conversation history to provide memory, journaling, and insights. You can delete chats, reset your Replika, and delete your account from settings if you want a clean slate. As with any AI companion app, avoid sharing sensitive personal, financial, or medical information. For details on retention, processing, and your rights, review Replika’s Privacy Policy and Terms in the app or on the official website.</p>
+    </details>
+    <details>
+      <summary>Can I cancel my Replika Pro subscription anytime?</summary>
+      <p>Yes. You can cancel anytime via the App Store, Google Play, or your web account. After canceling, access continues until the end of the current billing period, and renewal stops. Refunds, if any, are governed by the store’s refund policy, so check the rules for your platform.</p>
+    </details>
+  </section>
+</main>
+    
+<footer class="container"><p>© 2025 AI Review Hub — fast, accessible reviews of AI characters.</p></footer>
+</body></html>

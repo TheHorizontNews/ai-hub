@@ -1,0 +1,223 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Anima AI (MyAnima) Review — Stable Roleplay & Pricing</title>
+<meta name="description" content="Anima AI review: immersive companion app with consistent personalities, polished mobile UX, SFW-leaning rules, and competitive mid-range pricing."/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="preload" as="image" href="/assets/hero.webp"/>
+<script defer src="/js/mobile-nav-unified.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "assets/lovescape.webp"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Review", "itemReviewed": {"@type": "SoftwareApplication", "name": "Anima AI"}, "author": {"@type": "Organization", "name": "AI Review Hub"}, "reviewRating": {"@type": "Rating", "ratingValue": 4.3, "bestRating": 5, "worstRating": 1}, "datePublished": "2025-01-01", "publisher": {"@type": "Organization", "name": "AI Review Hub"}}</script>
+<script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "/reviews/"}, {"@type": "ListItem", "position": 3, "name": "Anima AI Review", "item": "/reviews/anima-ai-review/"}]}</script>
+
+<!-- Load review-specific styles -->
+<script>
+window.addEventListener('load',()=>{
+  const stylesheets = [
+    '/css/mobile-fixed.css',
+    '/css/review-design.css'
+  ];
+  
+  stylesheets.forEach((href, i) => {
+    setTimeout(() => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }, i * 100);
+  });
+});
+</script>
+
+<script defer src="/js/mobile-nav-unified.js"></script>
+  <link rel="stylesheet" href="/css/aihub.v8.patch.css">
+</head><body>
+<header class="header" id="hdr"><div class="container header__in">
+<a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
+<nav class="nav" id="site-nav">
+  <a href="/">Home</a>
+  <a href="/reviews/">Reviews</a>
+  <a href="/comparisons/">Comparisons</a>
+  <a href="/clusters/">Clusters</a>
+  <a href="/guides/">Guides</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</div></header>
+<div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
+
+<main class="container">
+  <div class="review-hero">
+    <nav class="review-meta">
+      <a href="/">Home</a> › <a href="/reviews/">Reviews</a> › Anima AI
+    </nav>
+    
+    <h1 class="h1 review-title">Anima AI (MyAnima) Review 2025: Immersive Companion App with Stable Roleplay</h1>
+    
+    <div class="review-banner">
+      <img src="/assets/Anima-AI.webp" 
+           alt="Anima AI companion review" 
+           width="1400" height="800" 
+           loading="eager" 
+           class="banner review-compact"/>
+    </div>
+    
+    <div class="review-score">
+      <div class="score-main">
+        <div class="score-number">86</div>
+        <div class="score-label">Editor Score</div>
+      </div>
+      <div class="score-details">
+        <div class="score-price">$8.99/month</div>
+        <div class="score-badge">
+          <span>🎭</span>
+          <span>Roleplay Focused</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="pros-cons">
+    <div class="pros-card">
+      <h2>Pros</h2>
+      <ul>
+        <li>Excellent roleplay capabilities with immersive scenarios — Natural pacing and scene starters help you dive into believable stories without heavy prompt engineering.</li>
+        <li>Competitive pricing with a strong feature-to-cost ratio — Mid-range plans deliver good memory, limits, and tools compared to similarly priced rivals</li>
+        <li>Strong character development and personality consistency — Personas stay coherent across sessions, reducing repetition and out-of-character replies.</li>
+        <li>Well-designed mobile apps with smooth performance — Fast, stable, and beginner-friendly UX on iOS/Android and web.</li>
+        <li>Active development with regular feature updates — Frequent improvements keep conversation quality and tools moving forward.</li>
+      </ul>
+    </div>
+    <div class="cons-card">
+      <h2>Cons</h2>
+      <ul>
+        <li>Smaller character library vs. major platforms — Fewer public characters if you love endless browsing and community creations</li>
+        <li>Limited advanced customization — Power users may want deeper system-prompt control or granular behavior rules</li>
+        <li>More conservative content restrictions — Not ideal for explicit NSFW or boundary-pushing roleplay.</li>
+        <li>Newer platform with a smaller community — Less social discovery than large creator marketplaces.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rating Breakdown -->
+  <section class="section">
+    <h2 class="h2">Detailed Rating Breakdown</h2>
+    <div class="rating-breakdown">
+      <div class="rating-item">
+        <div class="rating-label">Roleplay Quality</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 88%;"></div>
+        </div>
+        <div class="rating-value">88/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Character Consistency</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 90%;"></div>
+        </div>
+        <div class="rating-value">90/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Mobile Experience</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 92%;"></div>
+        </div>
+        <div class="rating-value">92/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Value for Money</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 87%;"></div>
+        </div>
+        <div class="rating-value">87/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">Content Variety</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 75%;"></div>
+        </div>
+        <div class="rating-value">75/100</div>
+      </div>
+      <div class="rating-item">
+        <div class="rating-label">User Interface</div>
+        <div class="rating-bar">
+          <div class="rating-fill" style="width: 85%;"></div>
+        </div>
+        <div class="rating-value">85/100</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="h2">Alternatives & Comparisons</h2>
+    <div class="alternatives-grid">
+      <article class="alternative-card">
+        <h3><a href="/comparisons/lovescape-vs-anima-ai/">Lovescape vs Anima AI</a></h3>
+        <p class="lead" style="font-size:14px">Compare Anima AI's roleplay focus with Lovescape's premium features and advanced customization.</p>
+      </article>
+      <article class="alternative-card">
+        <h3><a href="/reviews/crushon-ai-review/">CrushOn.AI Review</a></h3>
+        <p class="lead" style="font-size:14px">Alternative platform with larger character library and community-driven content creation.</p>
+      </article>
+      <article class="alternative-card">
+        <h3><a href="/reviews/replika-ai-review/">Replika AI Alternative</a></h3>
+        <p class="lead" style="font-size:14px">Compare with Replika's companionship approach versus Anima's roleplay specialization.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Share Section -->
+  
+
+  <section class="section card">
+    <h2 class="h2">What Is Anima AI?</h2>
+    <p class="lead">Anima AI—also known as MyAnima—is a relationship-oriented AI companion and roleplay chatbot. It focuses on believable personalities, consistent dialogue, and a polished mobile experience rather than a massive creator marketplace. The result is a calm, dependable chat app for daily companionship, light-to-medium roleplay, and romance.</p>
+    <h2>Standout Features</h2>
+<ul>
+<li>Immersive scenarios &amp; prompts: date nights, slice-of-life, and adventure starters make it easy to jump into scenes.</li>
+<li>Personality building: tune tone, likes/dislikes, backstory, and boundaries for steadier characterization.</li>
+<li>Memory &amp; continuity: sessions remember preferences and ongoing plot beats better than many mid-tier apps.</li>
+<li>Mobile-first UX: smooth iOS/Android apps with quick onboarding and fast performance.</li>
+<li>Active development: regular quality-of-life updates and new conversation tools.</li>
+</ul>
+<h2>Roleplay &amp; Conversation Quality</h2>
+<p>Anima&rsquo;s strength is personality consistency. Characters keep their voice across longer chats, avoid whiplash topic changes, and follow light story arcs without constant re-prompting. World-heavy roleplay works, but ultra-complex or niche kinks may require extra guidance.</p>
+<h2>Safety &amp; Content Controls</h2>
+<p>Anima is SFW-leaning with tasteful romance options. Content rules are more conservative than on NSFW-first platforms, which many users prefer for comfort and safety. You can reset memory, set boundaries, and block/report from settings.</p>
+<h2>Pricing &amp; Value</h2>
+<p>Positioned in the mid-range, Anima offers a limited free tier for testing and paid plans that unlock longer memory, larger limits, and full customization. Considering stability and app polish, the feature-to-cost ratio is competitive.</p>
+<h2>Who Is Anima Best For?</h2>
+<ul>
+<li>Users who want a reliable AI companion for daily talk, romance, and light roleplay.</li>
+<li>Beginners who value a well-designed mobile app over giant creator libraries.</li>
+<li>SFW-first users who still want some flirting and intimacy within clear boundaries.</li>
+</ul>
+  </section>
+
+  <section class="section faq">
+    <h2 class="h2">Frequently Asked Questions</h2>
+    <details>
+      <summary>Is there a free trial available?</summary>
+      <p>Yes. Anima AI usually offers a limited free tier so you can test conversation quality and basic customization. To unlock longer memory, higher message limits, and premium features, upgrade to a paid plan (pricing may vary by region/store).</p>
+    </details>
+    <details>
+      <summary>How good are Anima AI’s roleplay capabilities?</summary>
+      <p>Anima AI performs well for romance, slice-of-life, and light adventure. It keeps a consistent personality across sessions and follows simple plots without heavy prompting. Ultra-complex world-building or niche kinks may require extra guidance compared to sandbox, NSFW-first platforms.</p>
+    </details>
+    <details>
+      <summary>Does Anima AI support NSFW content?</summary>
+      <p>Anima AI is SFW-leaning with tasteful romance options. Some intimate content is available, but explicit NSFW is limited and more conservative than on adult-focused apps. If you need fully unfiltered roleplay, consider NSFW-first alternatives.</p>
+    </details>
+    <details>
+      <summary>How does the mobile app compare to the web version?</summary>
+      <p>The mobile apps (iOS/Android) are the best way to use Anima AI: fast performance, clean navigation, and quick access to settings and memories. The web version mirrors core features, but mobile offers a more polished, on-the-go experience with reliable notifications and smoother chats.</p>
+    </details>
+  </section>
+</main>
+    
+<footer class="container"><p>© 2025 AI Review Hub — fast, accessible reviews of AI characters.</p></footer>
+</body></html>

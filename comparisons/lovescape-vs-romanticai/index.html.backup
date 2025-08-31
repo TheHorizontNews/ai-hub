@@ -1,0 +1,325 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lovescape vs RomanticAI — Detailed Comparison</title>
+<meta name="description" content="Feature‑by‑feature showdown across realism, personalization, safety, latency, voice, NSFW filters, privacy and pricing."/>
+
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/mobile-fixed.css"/>
+<link rel="stylesheet" href="/css/comparisons-enhanced.css"/>
+<link rel="stylesheet" href="/css/comparison-detail-enhanced.css"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "/assets/lovescape.webp"}</script><script type='application/ld+json'>{"@context": "https://schema.org", "@type": "WebPage", "name": "Lovescape vs RomanticAI \u2014 Detailed Comparison"}</script><script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Comparisons", "item": "/comparisons/"}, {"@type": "ListItem", "position": 3, "name": "Lovescape Vs RomanticAI", "item": "/comparisons/lovescape-vs-romanticai/"}]}</script>
+  
+
+<!-- Enhanced mobile navigation script -->
+<script>
+(function() {
+  'use strict';
+  
+  function initMobileNav() {
+    console.log('Initializing mobile navigation...');
+    
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle) {
+      console.error('Nav toggle not found');
+      return;
+    }
+    
+    if (!nav) {
+      console.error('Nav element not found');
+      return;
+    }
+
+    console.log('Nav elements found, setting up handlers...');
+
+    navToggle.replaceWith(navToggle.cloneNode(true));
+    const newNavToggle = document.querySelector('.nav-toggle');
+
+    function toggleMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const isOpen = body.classList.contains('nav-open');
+      
+      if (isOpen) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+      } else {
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        newNavToggle.classList.add('active');
+        newNavToggle.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    newNavToggle.addEventListener('click', toggleMenu);
+    newNavToggle.addEventListener('touchstart', toggleMenu);
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileNav);
+  } else {
+    setTimeout(initMobileNav, 100);
+  }
+})();
+</script>
+
+<!-- Force mobile navigation CSS -->
+<style>
+@media (max-width: 980px) {
+  .nav { display: none !important; }
+  .nav-toggle {
+    display: inline-flex !important; flex-direction: column !important;
+    justify-content: center !important; align-items: center !important;
+    width: 40px !important; height: 40px !important;
+    border: none !important; background: transparent !important;
+    cursor: pointer !important; padding: 8px !important; z-index: 10001 !important;
+  }
+  .burger-line {
+    display: block !important; width: 24px !important; height: 2px !important;
+    background: var(--text) !important; margin: 3px 0 !important; transition: all 0.3s ease !important;
+  }
+  .nav.nav-open {
+    display: flex !important; position: fixed !important; top: 0 !important; left: 0 !important;
+    width: 100vw !important; height: 100vh !important; background: rgba(7, 7, 8, 0.98) !important;
+    backdrop-filter: blur(20px) !important; flex-direction: column !important;
+    justify-content: center !important; align-items: center !important; gap: 2rem !important;
+    z-index: 10000 !important; padding: 2rem !important;
+  }
+  .nav.nav-open a {
+    font-size: 1.4rem !important; font-weight: 600 !important; padding: 1rem 2rem !important;
+    border-radius: 12px !important; border: 1px solid var(--bd) !important;
+    background: linear-gradient(135deg, var(--panel), var(--panel2)) !important;
+    text-align: center !important; width: 220px !important; display: block !important;
+    text-decoration: none !important; color: var(--text) !important;
+  }
+}
+</style>
+
+</head><body>
+<header class="header" id="hdr"><div class="container header__in">
+<a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
+<nav class="nav" id="site-nav">
+  <a href="/">Home</a>
+  <a href="/reviews/">Reviews</a>
+  <a href="/comparisons/">Comparisons</a>
+  <a href="/clusters/">Clusters</a>
+  <a href="/guides/">Guides</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</div></header>
+<div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
+
+<main class="comparison-detail container">
+  <h1 class="h1">Lovescape vs RomanticAI — Detailed Comparison</h1>
+  
+  <section class="section card">
+    <h2 class="h2">Editor’s Summary: Lovescape vs RomanticAI</h2>
+    <p>Lovescape vs RomanticAI compares a premium, memory-driven roleplay companion with a romance-first AI chat app geared toward affectionate texting and intimate dialogue. Lovescape is designed for immersive roleplay with long-term memory, precise persona/behavior editing, real-time voice, and explicit SFW/NSFW toggles so adults can set clear boundaries without breaking immersion. Scenes feel coherent and “in character” across multi-chapter arcs, and the setup is turnkey—sign in, choose or craft a character, and step straight into a consistent story with reliable context retention and voice.</p>
+
+<p>RomanticAI prioritizes romance and emotional intimacy with quick onboarding and low friction. It’s great for flirty chats and relationship vibes, but tools for deep persona control are lighter and memory/continuity can be less dependable in longer narratives. If your goal is high-end roleplay with stable memory, voice presence, and granular controls, Lovescape is the stronger long-term companion. If you mainly want simple, romantic conversation and fast on-ramps to affection, RomanticAI is friendly and accessible—just expect shallower customization and fewer boundary controls than a premium editor.</p>
+  </section>
+
+  <section class="section split">
+    <div class="card">
+      <div class="kv"><img src="/assets/lovescape.webp" alt="Lovescape Logo"/><h3>Lovescape — Pros</h3></div>
+      <ul><li>Advanced roleplay & memory that keep characters “on script” through long story arcs</li>
+        <li>Persona/behavior editing and boundary rules for precise tone, intimacy, and pacing</li>
+        <li>Real-time voice aligned with persona for stronger presence during key scenes</li>
+        <li>Clear SFW/NSFW toggles and safety settings for adult exploration with control</li>
+        <li>Turnkey setup; all features integrated—no technical hurdles</li>
+      </ul>
+      <h4>Cons</h4><ul><li>Premium pricing; top features live in the paid tier</li>
+        <li>Depth of options can feel complex at first</li></ul>
+    </div>
+    <div class="card">
+      <div class="kv"><img src="/assets/lovescape.webp" alt="RomanticAI Logo"/><h3>RomanticAI — Pros</h3></div>
+      <ul><li>Romance-centric experience that’s easy to start and emotionally engaging</li>
+        <li>Low-friction onboarding; quick to begin affectionate chats</li>
+        <li>Good for casual daily conversation and relationship vibes</li></ul>
+      <h4>Cons</h4><ul><li>Shallower memory and less consistent continuity in long roleplays</li>
+        <li>Limited persona tools; fewer behavior rules vs. pro editors</li>
+        <li>Boundary/safety controls less granular than Lovescape’s</li>
+        <li>Voice and advanced features not as integrated for in-character immersion</li></ul>
+    </div>
+  </section>
+
+  <section class="section card">
+    <h2 class="h2">Verdict</h2>
+    <div class="verdict">
+      <div>
+        <p class="lead">Choose Lovescape if you want immersive, long-form roleplay with reliable memory, in-character voice, and granular personalization—a premium AI companion built for believable relationship arcs and safe adult exploration. Pick RomanticAI if your priority is fast, flirty romance and low-effort daily chats, and you’re okay with shallower memory and fewer advanced controls.</p>
+        <div class="verdict-meters">
+          <div>Realism <div class="meter"><i style="width:94%"></i></div></div>
+          <div>Value <div class="meter"><i style="width:84%"></i></div></div>
+          <div>Personalization <div class="meter"><i style="width:91%"></i></div></div>
+        </div>
+        <div class="bullets">
+          <div>• Lovescape: deep roleplay, consistent personas, SFW/NSFW toggles, behavior rules, real-time voice, long-term value</div>
+          <div>• RomanticAI: quick romance, affectionate texting, casual companionship, minimal setup</div>
+        </div>
+      </div>
+      <div class="radar-container">
+        <h3>Performance Comparison</h3>
+      </div>
+      <div class="stack">
+        <a class="btn-mini" href="/reviews/lovescape-review/"><img src="/assets/lovescape.webp" alt="Lovescape"/> Read Lovescape review <span class="win">Winner</span></a>
+        <a class="btn-mini" href="/reviews/romanticai-review/"><img src="/assets/lovescape.webp" alt="RomanticAI"/> Read RomanticAI review</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="container"><p>© 2025 AI Review Hub — fast, accessible reviews of AI characters.</p></footer>
+<script>
+(function(){
+  const categoryLabels = ["Value","Realism","Personalization","Safety","Latency","Voice","NSFW","Privacy"];
+  const brandData = {
+    lovescape: [86,90,88,80,82,70,92,78],
+    "candy-ai": [84,84,86,82,80,75,85,76],
+    "crushon-ai": [82,85,84,75,80,75,95,70],
+    janitorai: [90,82,85,75,78,72,88,72],
+    replika: [80,78,70,85,88,82,55,84],
+    "anima-ai": [78,86,82,80,85,78,80,75],
+    romanticai: [80,80,75,85,82,70,65,80],
+    chatfai: [70,74,72,85,75,65,70,78],
+    "myai-love": [75,78,70,82,80,68,75,76],
+    "ai-dungeon": [72,76,85,80,78,60,85,75]
+  };
+  const BLUE = '#6A7DFF', PINK = '#FF375F';
+
+  function slugToName(slug){
+    const map = {
+      lovescape: 'Lovescape', 'romanticai': 'RomanticAI', 'crushon-ai': 'CrushOn.AI',
+      janitorai: 'JanitorAI', replika: 'Replika', anima: 'Anima AI',
+      romanticai: 'RomanticAI', chatfai: 'ChatFAI', 'myai-love': 'MyAI.love', 'ai-dungeon': 'AI Dungeon'
+    };
+    return map[slug] || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  }
+
+  function drawRadar(canvas, series, categories) {
+    const ctx = canvas.getContext('2d');
+    const DPR = window.devicePixelRatio || 1;
+    const size = 200;
+    canvas.width = size * DPR;
+    canvas.height = size * DPR;
+    canvas.style.width = size + 'px';
+    canvas.style.height = size + 'px';
+    ctx.scale(DPR, DPR);
+    ctx.translate(size/2, size/2);
+    
+    const radius = size/2 - 30;
+    ctx.clearRect(-size/2, -size/2, size, size);
+    
+    for(let i = 1; i <= 5; i++) {
+      const r = radius * i / 5;
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(255,255,255,.08)';
+      ctx.lineWidth = 1;
+      for(let j = 0; j < categories.length; j++) {
+        const angle = (Math.PI * 2 * j / categories.length) - Math.PI/2;
+        const x = Math.cos(angle) * r;
+        const y = Math.sin(angle) * r;
+        j === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.stroke();
+    }
+    
+    ctx.fillStyle = 'rgba(255,255,255,.8)';
+    ctx.font = '12px system-ui, -apple-system, Segoe UI, Inter, Arial';
+    ctx.textAlign = 'center';
+    categories.forEach((cat, i) => {
+      const angle = (Math.PI * 2 * i / categories.length) - Math.PI/2;
+      const x = Math.cos(angle) * (radius + 15);
+      const y = Math.sin(angle) * (radius + 15);
+      ctx.fillText(cat, x, y + 4);
+    });
+    
+    series.forEach(s => {
+      ctx.beginPath();
+      s.data.forEach((val, i) => {
+        const v = Math.max(0, Math.min(100, val)) / 100;
+        const angle = (Math.PI * 2 * i / categories.length) - Math.PI/2;
+        const x = Math.cos(angle) * (radius * v);
+        const y = Math.sin(angle) * (radius * v);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.closePath();
+      ctx.fillStyle = s.fill;
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = 2;
+      ctx.fill();
+      ctx.stroke();
+    });
+  }
+
+  function addRadarChart() {
+    const path = location.pathname.replace(/\/+$/, '/');
+    if (!/^\/comparisons\/[^\/]+\/$/.test(path)) return;
+
+    const pair = path.match(/\/comparisons\/([^\/]+)-vs-([^\/]+)\//i);
+    if (!pair) return;
+    const s1 = pair[1], s2 = pair[2];
+    const n1 = slugToName(s1), n2 = slugToName(s2);
+
+    const radarContainer = document.querySelector('.radar-container');
+    if (!radarContainer || radarContainer.querySelector('canvas')) return;
+
+    const canvas = document.createElement('canvas');
+    const data1 = brandData[s1] || brandData.lovescape;
+    const data2 = brandData[s2] || brandData['romanticai'];
+    
+    const series = [
+      { data: data1, fill: 'rgba(255,53,85,0.2)', color: PINK },
+      { data: data2, fill: 'rgba(106,125,255,0.1)', color: BLUE }
+    ];
+
+    drawRadar(canvas, series, categoryLabels);
+    radarContainer.appendChild(canvas);
+
+    const legend = document.createElement('div');
+    legend.className = 'radar-legend';
+    legend.innerHTML = `
+      <span><div class="legend-color" style="background: ${PINK}"></div>${n1}</span>
+      <span><div class="legend-color" style="background: ${BLUE}"></div>${n2}</span>
+    `;
+    radarContainer.appendChild(legend);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addRadarChart);
+  } else {
+    addRadarChart();
+  }
+})();
+</script>
+</body></html>

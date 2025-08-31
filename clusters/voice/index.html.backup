@@ -1,0 +1,181 @@
+<!doctype html><html lang='en'><head>
+<title>Voice AI Girlfriends — AI Review Hub</title>
+<meta name='description' content='AI girlfriends with voice calls, real-time talk, TTS/STT features.'/>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/mobile-fixed.css"/>
+<script>
+// Unified Mobile Navigation - Inline Version
+(function() {
+  'use strict';
+
+  function initMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle || !nav) return;
+
+    // Ensure burger lines are properly structured
+    if (navToggle.children.length === 0) {
+      navToggle.innerHTML = `
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      `;
+    }
+
+    // Ensure menu is closed by default
+    body.classList.remove('nav-open');
+    nav.classList.remove('nav-open');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    body.style.overflow = '';
+
+    // Toggle function
+    function toggleMenu() {
+      const isOpen = body.classList.contains('nav-open');
+      
+      if (isOpen) {
+        // Close menu
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      } else {
+        // Open menu
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden';
+      }
+    }
+
+    // Click handler for burger button
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking nav links
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+
+    // Close menu when clicking outside (on the nav overlay itself)
+    nav.addEventListener('click', function(e) {
+      if (e.target === nav) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+  }
+
+  // Header scroll effect
+  function initHeaderScroll() {
+    const header = document.querySelector('#hdr');
+    if (!header) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          header.classList.toggle('fixed', window.scrollY > 8);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // Initialize when DOM is ready
+  function init() {
+    initMobileNav();
+    initHeaderScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "/", "logo": "/assets/lovescape.webp"}</script>
+</head><body>
+<header class="header" id="hdr"><div class="container header__in">
+<a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
+<nav class="nav" id="site-nav">
+  <a href="/">Home</a>
+  <a href="/reviews/">Reviews</a>
+  <a href="/comparisons/">Comparisons</a>
+  <a href="/clusters/">Clusters</a>
+  <a href="/guides/">Guides</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</div></header>
+<div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
+
+<main class="container">
+  <h1 class="h1">Voice AI Girlfriends</h1>
+  <p class="lead">AI companions with real-time voice calls, TTS/STT and natural speech.</p>
+  
+  <div class="cards">
+    <article class="card">
+      <h3>Lovescape</h3>
+      <p>Premium voice calls with natural TTS.</p>
+      <p><a class="btn ghost" href="/reviews/lovescape-review/">Review</a></p>
+    </article>
+    
+    <article class="card">
+      <h3>Replika AI</h3>
+      <p>Voice chat with emotional responses.</p>
+      <p><a class="btn ghost" href="/reviews/replika-ai-review/">Review</a></p>
+    </article>
+    
+    <article class="card">
+      <h3>CrushOn.AI</h3>
+      <p>Voice roleplay with character consistency.</p>
+      <p><a class="btn ghost" href="/reviews/crushon-ai-review/">Review</a></p>
+    </article>
+  </div>
+
+  <section class="section card">
+    <h2 class="h2">Voice Features</h2>
+    <p>AI companions with voice capabilities offer real-time speech, natural TTS (text-to-speech), and STT (speech-to-text) for hands-free interaction. Voice quality varies by platform.</p>
+  </section>
+</main>
+
+<footer class="container"><p>© 2025 AI Review Hub — voice-enabled AI companions.</p></footer>
+</body></html>

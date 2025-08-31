@@ -1,0 +1,214 @@
+<!doctype html><html lang='en'><head>
+  <title>AI Girlfriend App Guide 2025 — Companionship, Roleplay, Voice & Pricing</title>
+  <meta name='description' content='Find an AI girlfriend app for iOS, Android and web. Compare chat realism, long-term memory, voice calls, SFW/NSFW controls, pricing, privacy and free vs premium options. See AI boyfriend app and AI character alternatives.'/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/mobile-fixed.css"/>
+<link rel="preload" as="image" href="/assets/hero.webp"/>
+<script>
+// Unified Mobile Navigation - Inline Version
+(function() {
+  'use strict';
+
+  function initMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle || !nav) return;
+
+    // Ensure burger lines are properly structured
+    if (navToggle.children.length === 0) {
+      navToggle.innerHTML = `
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      `;
+    }
+
+    // Ensure menu is closed by default
+    body.classList.remove('nav-open');
+    nav.classList.remove('nav-open');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    body.style.overflow = '';
+
+    // Toggle function
+    function toggleMenu() {
+      const isOpen = body.classList.contains('nav-open');
+      
+      if (isOpen) {
+        // Close menu
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      } else {
+        // Open menu
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden';
+      }
+    }
+
+    // Click handler for burger button
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking nav links
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+
+    // Close menu when clicking outside (on the nav overlay itself)
+    nav.addEventListener('click', function(e) {
+      if (e.target === nav) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+  }
+
+  // Header scroll effect
+  function initHeaderScroll() {
+    const header = document.querySelector('#hdr');
+    if (!header) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          header.classList.toggle('fixed', window.scrollY > 8);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // Initialize when DOM is ready
+  function init() {
+    initMobileNav();
+    initHeaderScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "/assets/lovescape.webp"}</script><script type='application/ld+json'>{"@context": "https://schema.org", "@type": "Article", "headline": "Best AI Girlfriend App in 2025 \u2013 Top Picks", "datePublished": "2025-01-01", "author": {"@type": "Organization", "name": "AI Review Hub"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Best AI Girlfriend App in 2025 \u2013 Top Picks", "item": "/ai-girlfriend-app/"}]}}</script>  <link rel="stylesheet" href="/css/aihub.v8.patch.css">
+<!-- Load review-specific styles -->
+<script>
+window.addEventListener('load',()=>{
+  const stylesheets = [
+    '/css/review-design.css'
+  ];
+  
+  stylesheets.forEach((href, i) => {
+    setTimeout(() => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }, i * 100);
+  });
+});
+</script>
+
+
+  
+</head><body>
+  <header class="header" id="hdr"><div class="container header__in">
+<a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
+<nav class="nav" id="site-nav">
+  <a href="/">Home</a>
+  <a href="/reviews/">Reviews</a>
+  <a href="/comparisons/">Comparisons</a>
+  <a href="/clusters/">Clusters</a>
+  <a href="/guides/">Guides</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</div></header>
+<div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
+<main class="container">
+  <h1 class="h1">AI Girlfriend Apps — Full Guide</h1>
+  <img src="/assets/app2.webp" alt="" class="banner hero-slim"/>
+  <br>
+  <section class="section card">
+    <h2 class="h2">AI Girlfriend App (2025): Companionship, Roleplay & Voice on iOS/Android/Web</h2>
+    <p>Choosing an AI girlfriend app comes down to what you want from a companion: gentle daily talk, playful flirting, or immersive roleplay with real-time voice. This page explains how the leading apps handle chat realism, long-term memory, persona/behavior settings, and SFW/NSFW safety controls for adult users. You’ll also see free vs premium differences, supported platforms (iOS, Android, web), and privacy considerations.</p>
+
+<p>Prefer check-ins and emotional support? Pick a companion-style AI girlfriend app with journaling and mood tracking. Want believable romance arcs and scene building? Choose character-driven platforms that offer persona editing, behavior rules and strong memory. If you’d rather explore a different dynamic, the same guidance applies to an AI boyfriend app or a customizable AI character with your ideal personality.</p>
+  </section>
+  <section class="section zigzag">
+    <div class="zrow">
+      <div class="zimg"><img src="/assets/ai-girlfriend-app1.webp" alt=""/></div>
+      <div class="card"><h3 class="h2">Key takeaways</h3><ul>
+        <li>Match intent to features: Companion chat → wellness tools; romantic/fictional roleplay → persona controls + stronger memory.</li>
+        <li>Free vs premium: Free is good for testing; premium adds longer memory, higher limits and higher-quality voice.</li>
+        <li>Safety & privacy: Look for clear SFW/NSFW toggles (18+), block/report tools and transparent data retention.</li>
+        <li>Platforms: Most AI girlfriend apps work on iOS, Android and web so you can switch between phone and desktop.</li>
+        <li>Control matters: Persona editing + behavior rules make an AI girlfriend feel consistent across multi-day stories.</li>
+      </ul></div>
+    </div>
+    <div class="zrow reverse">
+      <div class="card"><h3 class="h2">Recommended picks</h3><p>Browse our picks by realism, control, and value. Compare companion-first apps with calm daily talk, character-driven apps that emphasise roleplay and memory, community libraries with thousands of personas, and free front ends that connect to your own LLM/API.</p><p><a class="btn primary" href="/best-ai-girlfriend-apps/">See rankings</a></p></div>
+      <div class="zimg"><img src="/assets/app3.webp" alt="own LLM/API"/></div>
+    </div>
+  </section>
+  <section class="section faq">
+    <h2 class="h2">FAQ</h2>
+    <details><summary>Is there a free AI girlfriend app?</summary><p>Yes. Most platforms offer a free tier to try basic chat and features. For daily use or deeper roleplay, premium typically adds longer memory, higher message limits and better voice. Some community sites are free but require your own LLM/API (you pay usage to the provider).</p></details>
+    <details><summary>Is NSFW available in an AI girlfriend app?</summary><p>It depends on the app. Many are SFW-first, while others allow NSFW for adults with clear toggles and age checks. Always follow local laws and use built-in privacy/safety tools.</p></details>
+    <details><summary>What’s the difference between an AI girlfriend app and an AI character platform?</summary><p>Companion apps focus on supportive conversation. AI character platforms add deeper roleplay tools—persona editing, behavior rules, memory notes—to create more nuanced romance or fantasy scenarios. The same applies if you want an AI boyfriend app.</p></details>
+    <details><summary>Do these apps work on iOS and Android?</summary><p>Most AI girlfriend app providers support iOS, Android and web. If you want voice calls, verify that your device and plan support real-time voice with low latency.</p></details>
+    <details><summary>Are AI girlfriend apps private?</summary><p>Check each provider’s privacy policy, data deletion tools, storage duration and NSFW controls. Use block/report options and adjust content filters to your comfort level.</p></details>
+    <details><summary>Is premium worth it for roleplay?</summary><p>If immersion matters, yes. Premium usually improves long-term memory, raises limits and upgrades voice—key for consistent, believable AI girlfriends (or AI boyfriends) over longer stories.</p></details>
+  </section>
+
+  <section class="section card" data-bottom-seo>
+    <h2 class="h2">Choosing the right app</h2>
+    <p>Start with your use case.
+If you want a supportive AI girlfriend app for SFW conversation, pick an option with wellness features, simple controls and a warm tone. For romantic or fantasy roleplay, select a platform that lets you edit persona/behavior, stores long-term memory, and supports low-latency voice—that’s what keeps characterization stable across dates and story chapters.
+
+Budget then decides comfort level: free tiers help you find chemistry; premium plans usually unlock better memory, more messages and high-quality voice. Finally, review privacy and safety: data deletion, NSFW gates (18+), and community rules. With these boxes ticked, you’ll find a credible, safe AI companion experience on iOS, Android or web.</p>
+  </section>
+
+</main>
+</body></html>
