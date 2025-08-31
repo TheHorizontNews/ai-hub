@@ -1,7 +1,132 @@
 <!doctype html><html lang='en'><head>
   <title>AI Girlfriend App Guide 2025 — Companionship, Roleplay, Voice & Pricing</title>
   <meta name='description' content='Find an AI girlfriend app for iOS, Android and web. Compare chat realism, long-term memory, voice calls, SFW/NSFW controls, pricing, privacy and free vs premium options. See AI boyfriend app and AI character alternatives.'/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link rel="stylesheet" href="/css/style.css"/><link rel="preload" as="image" href="/assets/hero.webp"/><script defer src="/js/mobile-nav-unified.js"></script>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/mobile-fixed.css"/>
+<link rel="preload" as="image" href="/assets/hero.webp"/>
+<script>
+// Unified Mobile Navigation - Inline Version
+(function() {
+  'use strict';
+
+  function initMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle || !nav) return;
+
+    // Ensure burger lines are properly structured
+    if (navToggle.children.length === 0) {
+      navToggle.innerHTML = `
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      `;
+    }
+
+    // Ensure menu is closed by default
+    body.classList.remove('nav-open');
+    nav.classList.remove('nav-open');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    body.style.overflow = '';
+
+    // Toggle function
+    function toggleMenu() {
+      const isOpen = body.classList.contains('nav-open');
+      
+      if (isOpen) {
+        // Close menu
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      } else {
+        // Open menu
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden';
+      }
+    }
+
+    // Click handler for burger button
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close menu when clicking nav links
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+
+    // Close menu when clicking outside (on the nav overlay itself)
+    nav.addEventListener('click', function(e) {
+      if (e.target === nav) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+  }
+
+  // Header scroll effect
+  function initHeaderScroll() {
+    const header = document.querySelector('#hdr');
+    if (!header) return;
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          header.classList.toggle('fixed', window.scrollY > 8);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // Initialize when DOM is ready
+  function init() {
+    initMobileNav();
+    initHeaderScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "/assets/lovescape.webp"}</script><script type='application/ld+json'>{"@context": "https://schema.org", "@type": "Article", "headline": "Best AI Girlfriend App in 2025 \u2013 Top Picks", "datePublished": "2025-01-01", "author": {"@type": "Organization", "name": "AI Review Hub"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Best AI Girlfriend App in 2025 \u2013 Top Picks", "item": "/ai-girlfriend-app/"}]}}</script>  <link rel="stylesheet" href="/css/aihub.v8.patch.css">
 <!-- Load review-specific styles -->
 <script>
