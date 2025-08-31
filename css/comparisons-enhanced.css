@@ -1,0 +1,436 @@
+/* Enhanced Comparisons Page Styling */
+
+/* Mobile Navigation - Ensure burger menu is visible */
+@media (max-width: 980px) {
+  .nav-toggle {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: none !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    z-index: 10001 !important;
+  }
+  
+  .burger-line {
+    display: block !important;
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--text) !important;
+    margin: 3px 0 !important;
+    transition: all 0.3s ease !important;
+  }
+}
+
+/* Main container centering and spacing */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header section */
+.h1 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--r), var(--v));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lead {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+/* Criteria badges - centered */
+.criteria-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 2rem 0;
+}
+
+.badge-chip {
+  background: linear-gradient(135deg, rgba(255, 53, 85, 0.1), rgba(138, 43, 226, 0.1));
+  border: 1px solid rgba(255, 53, 85, 0.3);
+  color: var(--text);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.badge-chip:hover {
+  background: linear-gradient(135deg, rgba(255, 53, 85, 0.2), rgba(138, 43, 226, 0.2));
+  border-color: var(--r);
+  transform: translateY(-2px);
+}
+
+/* Comparison Grid - Enhanced Layout */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 32px;
+  margin: 3rem 0;
+  padding: 0;
+}
+
+/* Enhanced Comparison Cards with Frames */
+.comparison-card {
+  background: linear-gradient(135deg, 
+    rgba(11, 12, 14, 0.95) 0%, 
+    rgba(15, 17, 19, 0.95) 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 24px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Card border effect */
+.comparison-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--r), var(--v), var(--c));
+  border-radius: 24px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+/* Hover effects */
+.comparison-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 8px 20px rgba(255, 53, 85, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.comparison-card:hover::before {
+  opacity: 0.6;
+}
+
+/* Comparison Header */
+.comparison-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.vs-badge {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--r), var(--v));
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(255, 53, 85, 0.3);
+  position: relative;
+}
+
+.vs-badge::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--r), var(--v));
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.comparison-card:hover .vs-badge::after {
+  opacity: 0.5;
+}
+
+.comparison-header-content {
+  flex: 1;
+}
+
+.comparison-header h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+/* Competitor Tags */
+.competitor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tag.premium {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.2));
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.4);
+}
+
+.tag.sfw {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(22, 163, 74, 0.2));
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.tag.nsfw {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.2));
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.tag.free {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.2));
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.tag.balanced {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(147, 51, 234, 0.2));
+  color: #a855f7;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+.tag.romance {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(219, 39, 119, 0.2));
+  color: #ec4899;
+  border: 1px solid rgba(236, 72, 153, 0.4);
+}
+
+.tag.roleplay {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(124, 58, 237, 0.2));
+  color: #8b5cf6;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.tag.niche {
+  background: linear-gradient(135deg, rgba(156, 163, 175, 0.2), rgba(107, 114, 128, 0.2));
+  color: #9ca3af;
+  border: 1px solid rgba(156, 163, 175, 0.4);
+}
+
+.tag.budget {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.2));
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.tag.gaming {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.2));
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+/* Comparison Summary */
+.comparison-summary {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+/* Comparison Footer */
+.comparison-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.quick-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-size: 0.9rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Enhanced Button */
+.btn.primary {
+  background: linear-gradient(135deg, var(--r), var(--v));
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 53, 85, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 53, 85, 0.4);
+}
+
+.btn.primary:hover::before {
+  opacity: 1;
+}
+
+/* Section Card at Bottom */
+.section.card {
+  background: linear-gradient(135deg, 
+    rgba(11, 12, 14, 0.95) 0%, 
+    rgba(15, 17, 19, 0.95) 100%);
+  border: 1px solid var(--bd);
+  border-radius: 24px;
+  padding: 32px;
+  margin: 4rem auto 2rem auto;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.section.card h2 {
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+.section.card p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 2rem 0;
+  }
+  
+  .comparison-card {
+    padding: 24px;
+  }
+  
+  .comparison-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .vs-badge {
+    align-self: center;
+  }
+  
+  .comparison-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .quick-stats {
+    justify-content: center;
+  }
+  
+  .btn.primary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .criteria-badges {
+    gap: 8px;
+  }
+  
+  .badge-chip {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .comparison-card {
+    padding: 20px;
+  }
+  
+  .comparison-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .vs-badge {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+}

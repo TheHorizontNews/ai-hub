@@ -1,0 +1,801 @@
+/* Fixed Mobile Styles - No horizontal scroll */
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+/* Container fixes - RESTORED ORIGINAL DESKTOP DESIGN */
+.container {
+  max-width: var(--container) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(16px, 4vw, 40px) !important;
+  padding-right: clamp(16px, 4vw, 40px) !important;
+  box-sizing: border-box !important;
+}
+
+/* Desktop text content limits for better readability */
+@media (min-width: 981px) {
+  .container {
+    max-width: 1280px !important;
+    padding-left: clamp(16px, 4vw, 40px) !important;
+    padding-right: clamp(16px, 4vw, 40px) !important;
+  }
+  
+  /* Card content with proper padding */
+  .card {
+    padding: 24px !important;
+  }
+  
+  .card p,
+  .card .lead,
+  .card ul,
+  .card ol,
+  .card h2,
+  .card h3 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Section cards need extra padding for text content */
+  .section.card {
+    padding: 32px !important;
+  }
+  
+  .section.card p,
+  .section.card .lead,
+  .section.card ul,
+  .section.card ol {
+    max-width: none !important; /* Remove width limits for card content */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Limit text content width only for main content sections */
+  .section:not(.card) p,
+  .section:not(.card) .lead,
+  .section:not(.card) ul,
+  .section:not(.card) ol {
+    max-width: 800px !important;
+  }
+  
+  /* Hero content limits */
+  .hero p,
+  .hero .lead {
+    max-width: 600px !important;
+  }
+  
+  /* Text blocks in main content (not in cards) */
+  main > .container > p,
+  main > .container > .lead {
+    max-width: 800px !important;
+  }
+  
+  /* Grid layouts inside cards need proper spacing */
+  .card .grid-2 {
+    gap: 24px !important;
+  }
+  
+  .card .split {
+    gap: 24px !important;
+  }
+}
+
+/* Tablet container */
+@media (min-width: 768px) and (max-width: 980px) {
+  .container {
+    max-width: 960px !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  
+  .section p,
+  .section .lead {
+    max-width: 700px !important;
+  }
+}
+
+/* Mobile content width fixes - ONLY for mobile */
+@media (max-width: 767px) {
+  .container {
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Mobile-specific text improvements - CENTERED TEXT */
+  .hero {
+    padding: 1.5rem 0 !important;
+    text-align: center !important;
+  }
+  
+  .hero h1,
+  .hero .lead,
+  .hero p {
+    text-align: center !important;
+  }
+  
+  /* Center buttons on mobile */
+  .hero p {
+    text-align: center !important;
+  }
+  
+  /* Center section headings on mobile */
+  .section h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+  }
+  
+  /* Center all buttons on mobile */
+  .btn {
+    margin: 0 auto !important;
+    display: inline-flex !important;
+  }
+  
+  /* Ensure button containers are centered */
+  p:has(.btn) {
+    text-align: center !important;
+  }
+  
+  /* Regular cards - preserve backgrounds and normal text alignment */
+  .card {
+    padding: 20px !important;
+  }
+  
+  /* Section cards (text content blocks) need more padding on mobile */
+  .section.card {
+    padding: 24px 20px !important;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 8px !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+  }
+  
+  .card p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+    /* Remove forced centering - let cards use natural alignment */
+  }
+  
+  .card h2 {
+    font-size: 1.3rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+    margin-top: 0 !important;
+    text-align: center !important;
+  }
+  
+  .card ul,
+  .card ol {
+    margin-bottom: 1rem !important;
+    padding-left: 1.2rem !important;
+  }
+  
+  /* Only center main paragraphs and lead text, not card content */
+  p, .lead {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Center main section paragraphs but not card paragraphs */
+  .section > p,
+  .section > .lead {
+    text-align: center !important;
+  }
+  
+  .section {
+    padding: 1.5rem 0 !important;
+  }
+}
+
+/* Header fixes */
+.header {
+  width: 100% !important;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+}
+
+.header__in {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 16px !important;
+  box-sizing: border-box !important;
+}
+
+/* CLEAN BURGER MENU - Complete rewrite */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 12px 8px;
+  position: relative;
+  z-index: 10001;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.burger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.3s ease;
+  margin: 2px 0;
+  transform-origin: center;
+}
+
+.nav-toggle.active .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active .burger-line:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.nav-toggle.active .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile navigation - Override style.css conflicts */
+@media (max-width: 980px) {
+  .header .nav-toggle, .nav-toggle {
+    display: inline-flex !important;
+  }
+  
+  .header .nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(7, 7, 8, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    z-index: 10000 !important;
+    padding: 2rem !important;
+    box-sizing: border-box !important;
+    /* Override style.css grid layout */
+    grid-template-columns: unset !important;
+    transform: unset !important;
+    inset: 0 !important;
+    border-top: none !important;
+  }
+
+  .header .nav.nav-open {
+    display: flex !important;
+  }
+
+  body.nav-open {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+  }
+
+  .header .nav a {
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    padding: 1rem 2rem !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--bd) !important;
+    background: linear-gradient(135deg, var(--panel), var(--panel2)) !important;
+    transition: all 0.3s ease !important;
+    text-align: center !important;
+    width: 220px !important;
+    display: block !important;
+    text-decoration: none !important;
+    color: var(--text) !important;
+    transform: translateY(20px) !important;
+    opacity: 0 !important;
+  }
+
+  body.nav-open .header .nav a {
+    animation: slideInUp 0.4s ease forwards !important;
+  }
+
+  body.nav-open .header .nav a:nth-child(1) { animation-delay: 0.1s !important; }
+  body.nav-open .header .nav a:nth-child(2) { animation-delay: 0.2s !important; }
+  body.nav-open .header .nav a:nth-child(3) { animation-delay: 0.3s !important; }
+  body.nav-open .header .nav a:nth-child(4) { animation-delay: 0.4s !important; }
+  body.nav-open .header .nav a:nth-child(5) { animation-delay: 0.5s !important; }
+  body.nav-open .header .nav a:nth-child(6) { animation-delay: 0.6s !important; }
+
+  .header .nav a:hover,
+  .header .nav a:focus {
+    border-color: var(--c) !important;
+    background: linear-gradient(135deg, var(--c), var(--v)) !important;
+    color: #000 !important;
+    transform: translateY(0) scale(1.05) !important;
+  }
+
+  @keyframes slideInUp {
+    to {
+      transform: translateY(0) !important;
+      opacity: 1 !important;
+    }
+  }
+  
+  /* Force opacity override for animated links */
+  body.nav-open .header .nav a {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+/* Desktop navigation - ensure it stays visible */
+@media (min-width: 981px) {
+  .header .nav {
+    display: flex !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 20px !important;
+    z-index: auto !important;
+    padding: 0 !important;
+  }
+  
+  .header .nav a {
+    font-size: 16px !important;
+    font-weight: normal !important;
+    padding: 10px 12px !important;
+    border-radius: 10px !important;
+    border: none !important;
+    background: transparent !important;
+    transition: background 0.2s ease !important;
+    text-align: left !important;
+    width: auto !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    color: var(--text) !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .header .nav a:hover {
+    background: color-mix(in oklab, var(--r), transparent 90%) !important;
+    border-color: transparent !important;
+    color: var(--text) !important;
+    transform: none !important;
+  }
+  
+  .header .nav-toggle {
+    display: none !important;
+  }
+}
+
+/* Enhanced burger menu */
+.nav-toggle {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  position: relative;
+  z-index: 10001;
+}
+
+.nav-toggle__line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-toggle__line::before,
+.nav-toggle__line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.3s ease;
+}
+
+.nav-toggle__line::before { top: -7px; }
+.nav-toggle__line::after { top: 7px; }
+
+.nav-toggle.active .nav-toggle__line {
+  background: transparent;
+}
+
+.nav-toggle.active .nav-toggle__line::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.nav-toggle.active .nav-toggle__line::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Hero section - RESTORED ORIGINAL DESKTOP, mobile fixes only for mobile */
+@media (min-width: 981px) {
+  .hero {
+    display: grid !important;
+    grid-template-columns: 1.1fr 1fr !important;
+    gap: 20px !important;
+    align-items: center !important;
+    padding: 56px 0 18px !important;
+  }
+  
+  .hero h1 {
+    font-size: clamp(36px, 5.6vw, 48px) !important;
+    letter-spacing: -0.5px !important;
+    margin: 0.5rem 0 0.75rem !important;
+    text-align: left !important;
+  }
+  
+  .hero .lead {
+    color: var(--muted) !important;
+    max-width: 760px !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+  
+  .hero-art {
+    min-height: 520px !important;
+    border-radius: 26px !important;
+    background: transparent !important;
+    border: none !important;
+    overflow: visible !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .hero-art img {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 520px !important;
+    filter: none !important;
+    object-fit: contain !important;
+    max-height: 100% !important;
+  }
+}
+
+/* Mobile hero fixes - ONLY for mobile */
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+    padding: 1.5rem 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(24px, 7vw, 32px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+  }
+
+  .hero .lead {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    color: var(--muted) !important;
+  }
+
+  .hero p {
+    text-align: center !important;
+  }
+
+  .hero-art {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 300px !important;
+    height: 300px !important;
+    margin: 1rem 0 0 0 !important;
+    box-sizing: border-box !important;
+    background: radial-gradient(60% 60% at 65% 35%, rgba(255, 53, 85, 0.28), transparent 60%), 
+                radial-gradient(60% 60% at 35% 60%, rgba(138, 43, 226, 0.28), transparent 60%), 
+                #0d0e11 !important;
+    border: 1px solid var(--bd) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hero-art img {
+    width: 90% !important;
+    height: 90% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    right: auto !important;
+    bottom: auto !important;
+    filter: drop-shadow(0 8px 20px rgba(255, 53, 85, 0.2)) !important;
+  }
+}
+
+/* Cards mobile fixes - ONLY for mobile */
+@media (max-width: 980px) {
+  .cards {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+
+  .brand {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    text-align: left !important;
+  }
+
+  .brand img {
+    width: 50px !important;
+    height: 50px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* Desktop cards - proper padding for text */
+@media (min-width: 981px) {
+  .card {
+    padding: 24px !important;
+  }
+  
+  /* Section cards (text content blocks) need more padding */
+  .section.card {
+    padding: 32px 40px !important;
+  }
+  
+  /* Make sure text in cards doesn't touch edges */
+  .card p {
+    margin-bottom: 1rem !important;
+  }
+  
+  .card h2,
+  .card h3 {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .card ul,
+  .card ol {
+    margin-bottom: 1rem !important;
+    padding-left: 1.5rem !important;
+  }
+}
+
+/* Bento grid mobile fixes */
+@media (max-width: 980px) {
+  .bento {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .bento > a {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Section spacing - RESTORED ORIGINAL DESKTOP */
+@media (min-width: 981px) {
+  .section {
+    padding: 36px 0 !important;
+  }
+
+  .h1 {
+    font-size: clamp(36px, 5.6vw, 48px) !important;
+    letter-spacing: -0.5px !important;
+    margin: 0.5rem 0 0.75rem !important;
+  }
+
+  .h2 {
+    font-size: clamp(22px, 3vw, 30px) !important;
+    margin: 0 0 10px !important;
+  }
+
+  .lead {
+    color: var(--muted) !important;
+    max-width: 760px !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+  
+  p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+}
+
+/* Mobile section spacing - ONLY for mobile */
+@media (max-width: 980px) {
+  .section {
+    padding: 1.5rem 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .h1 {
+    font-size: clamp(24px, 7vw, 32px) !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .h2 {
+    font-size: clamp(20px, 5vw, 24px) !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .lead {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+    margin-bottom: 1rem !important;
+    max-width: 100% !important;
+  }
+  
+  p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+    max-width: 100% !important;
+  }
+  
+  .badge {
+    margin-bottom: 1rem !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Button fixes */
+.btn {
+  min-height: 44px !important;
+  min-width: 44px !important;
+  touch-action: manipulation !important;
+  user-select: none !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn:active {
+  transform: scale(0.98) !important;
+}
+
+/* Remove problematic elements */
+.search-system,
+.quick-compare,
+.accessibility-panel {
+  display: none !important;
+}
+
+/* Grid fixes */
+@media (max-width: 980px) {
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .split {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .cmp-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Banner fixes */
+@media (max-width: 980px) {
+  .banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9 !important;
+    object-fit: cover !important;
+  }
+}
+
+/* Footer fixes */
+footer {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 1rem 16px !important;
+}
+
+/* Text overflow fixes */
+* {
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+/* Image fixes */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Remove horizontal scroll on all elements */
+@media (max-width: 980px) {
+  * {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  
+  body, html {
+    overflow-x: hidden !important;
+  }
+}
+
+/* Lights animation fixes for mobile */
+@media (max-width: 980px) {
+  .lights {
+    display: none !important;
+  }
+  
+  .cursor-glow {
+    display: none !important;
+  }
+  
+  .orb {
+    display: none !important;
+  }
+}

@@ -1,0 +1,310 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Comparisons — AI Review Hub</title>
+<meta name="description" content="All head‑to‑head pages in one place."/>
+
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/mobile-fixed.css"/>
+<link rel="stylesheet" href="/css/comparisons-enhanced.css"/>
+<link rel="preload" as="image" href="/assets/hero.webp"/>
+<script defer src="/js/app.js"></script>
+<script defer src="/js/mobile-fixed.js"></script>
+
+<!-- Fallback mobile navigation script -->
+<script>
+(function() {
+  function initMobileNav() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle || !nav) return;
+
+    // Toggle function
+    function toggleMenu() {
+      const isOpen = body.classList.contains('nav-open');
+      
+      if (isOpen) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      } else {
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        navToggle.classList.add('active');
+        navToggle.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // Click handler
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleMenu();
+    });
+
+    // Close on nav link click
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileNav);
+  } else {
+    initMobileNav();
+  }
+})();
+</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "/", "logo": "assets/lovescape.webp"}</script>
+<script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Comparisons", "item": "/comparisons/"}]}</script>
+
+</head><body>
+<header class="header" id="hdr"><div class="container header__in">
+<a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
+<nav class="nav" id="site-nav">
+  <a href="/">Home</a>
+  <a href="/reviews/">Reviews</a>
+  <a href="/comparisons/">Comparisons</a>
+  <a href="/clusters/">Clusters</a>
+  <a href="/guides/">Guides</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</div></header>
+<div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
+
+<main class="container">
+  <h1 class="h1">Comparisons</h1>
+  <p class="lead">Head‑to‑head pages that weigh realism, personalization, safety, latency, voice, NSFW filters, privacy and value.</p>
+  
+  <div class="criteria-badges">
+    <span class="badge-chip">Realism</span>
+    <span class="badge-chip">Personalization</span>
+    <span class="badge-chip">Voice</span>
+    <span class="badge-chip">NSFW</span>
+    <span class="badge-chip">Value</span>
+  </div>
+
+  <div class="comparison-grid">
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs Replika</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag sfw">SFW Focus</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">Premium AI companion with advanced features vs gentle daily companionship focused on emotional wellbeing.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 83</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs $7.99</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-replika/">Read Comparison</a>
+      </div>
+    </article>
+    
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs CrushOn.AI</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag nsfw">NSFW Leader</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">Professional AI companion platform vs community-driven unfiltered roleplay with extensive character library.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 88</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs $14.99</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-crushon-ai/">Read Comparison</a>
+      </div>
+    </article>
+    
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs JanitorAI</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag free">Free Platform</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">All-inclusive premium experience vs free platform with extensive character creation and API flexibility.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 82</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs Free</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-janitorai/">Read Comparison</a>
+      </div>
+    </article>
+    
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs Candy.AI</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag balanced">Balanced</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">Advanced AI companion features vs strong customization options with competitive mid-range pricing.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 84</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs $12.99</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-candy-ai/">Read Comparison</a>
+      </div>
+    </article>
+    
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs RomanticAI</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag romance">Romance</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">Comprehensive AI companion platform vs specialized romantic relationship focus with affordable pricing.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 80</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs $9.99</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-romanticai/">Read Comparison</a>
+      </div>
+    </article>
+    
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs Anima AI</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag roleplay">Roleplay</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">Advanced AI companion with premium features vs excellent roleplay capabilities with mobile optimization.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 86</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs $8.99</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-anima-ai/">Read Comparison</a>
+      </div>
+    </article>
+    
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs ChatFAI</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag niche">Niche</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">Comprehensive AI companion platform vs specialized fictional character interactions with casual approach.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 74</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs $8.50</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-chatfai/">Read Comparison</a>
+      </div>
+    </article>
+    
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs MyAI.love</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag budget">Budget</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">Advanced AI companion features vs basic entry-level companion with affordable pricing and simple interface.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 78</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs $11.99</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-myai-love/">Read Comparison</a>
+      </div>
+    </article>
+    
+    <article class="comparison-card">
+      <div class="comparison-header">
+        <div class="vs-badge">VS</div>
+        <div class="comparison-header-content">
+          <h3>Lovescape vs AI Dungeon</h3>
+          <div class="competitor-tags">
+            <span class="tag premium">Premium</span>
+            <span class="tag gaming">Adventure</span>
+          </div>
+        </div>
+      </div>
+      <p class="comparison-summary">AI companion focused on relationships vs text-based adventure gaming with creative storytelling capabilities.</p>
+      <div class="comparison-footer">
+        <div class="quick-stats">
+          <span class="stat">🎯 <strong>94 vs 76</strong></span>
+          <span class="stat">💰 <strong>$19.99 vs $9.99</strong></span>
+        </div>
+        <a class="btn primary" href="/comparisons/lovescape-vs-ai-dungeon/">Read Comparison</a>
+      </div>
+    </article>
+  </div>
+
+  <section class="section card">
+    <h2 class="h2">How we compare</h2>
+    <p>Scores combine qualitative testing and scenario‑based checks. We focus on conversation depth, memory, persona consistency and UX speed. Value is estimated from monthly limits and voice minutes.</p>
+  </section>
+</main>
+
+<footer class="container"><p>© 2025 AI Review Hub — fast, accessible reviews of AI characters.</p></footer>
+<script defer src="/js/aihub.v8.enhance.js"></script>
+</body></html>

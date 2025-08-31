@@ -1,0 +1,118 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>Clusters — AI Review Hub</title>
+<meta name="description" content="Explore SFW, NSFW, voice, mobile and free plan clusters."/>
+
+<!-- Performance optimizations -->
+<link rel="preload" href="/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/style.min.css"></noscript>
+<link rel="stylesheet" href="/css/mobile-fixed.css">
+<link rel="preload" as="script" href="/js/mobile-fixed.js">
+
+<!-- Critical CSS inline -->
+<style>
+:root{--bg:#070708;--panel:#0b0c0d;--panel2:#0f1113;--text:#f3f6fb;--muted:#a6b1c7;--bd:#1b1d20;--r:#ff3555;--v:#8a2be2;--c:#05d5ff;--radius:22px;--container:1280px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(1200px 800px at 110% -10%,rgba(255,53,85,.24),transparent 60%),radial-gradient(900px 700px at -10% -20%,rgba(138,43,226,.22),transparent 60%),var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--container);margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+@media(max-width:767px){.container{padding-inline:16px !important}.hero{padding:1.5rem 0 !important;text-align:center !important}.hero h1{font-size:clamp(28px,8vw,36px) !important;line-height:1.2 !important;text-align:center !important}.hero .lead{font-size:16px !important;line-height:1.6 !important;text-align:center !important;max-width:100% !important}.hero p{text-align:center !important}.card{padding:20px !important}.section.card{padding:24px 20px !important}.card h3{font-size:1.1rem !important;line-height:1.3 !important;text-align:center !important}.card h2{font-size:1.3rem !important;line-height:1.3 !important;margin-top:0 !important;text-align:center !important}.section{padding:1.5rem 0 !important}.section h2{font-size:1.5rem !important;line-height:1.3 !important;text-align:center !important}.btn{margin:0 auto !important}p:has(.btn){text-align:center !important}.section > p,.section > .lead{text-align:center !important}}
+.header{position:sticky;top:0;z-index:60;background:transparent;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.header.fixed{backdrop-filter:saturate(160%) blur(10px);background:color-mix(in oklab,#0b0c0e,transparent 22%);border-color:var(--bd)}
+.header__in{display:flex;align-items:center;gap:14px;min-height:76px;justify-content:space-between}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:900;text-decoration:none;color:var(--text);white-space:nowrap;flex-shrink:0}
+.logo i{width:14px;height:14px;border-radius:999px;background:linear-gradient(135deg,var(--r),var(--v));box-shadow:0 0 18px rgba(255,53,85,.6)}
+.nav{display:flex;gap:20px;align-items:center}
+.nav a{padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--text)}
+.nav a:hover{background:color-mix(in oklab,var(--r),transparent 90%)}
+.nav-toggle{display:none;cursor:pointer;border:none;background:transparent;padding:12px 8px;position:relative;z-index:10001;flex-direction:column;justify-content:center;align-items:center;width:40px;height:40px}
+.burger-line{display:block;width:24px;height:2px;background:var(--text);transition:all 0.3s ease;margin:2px 0;transform-origin:center}
+@media(max-width:980px){.nav-toggle{display:flex !important}.nav{position:fixed !important;top:0 !important;left:0 !important;width:100vw !important;height:100vh !important;background:rgba(7,7,8,0.98) !important;backdrop-filter:blur(20px) !important;display:none !important;flex-direction:column !important;justify-content:center !important;align-items:center !important;gap:2rem !important;z-index:10000 !important;padding:2rem !important;box-sizing:border-box !important}.nav.nav-open{display:flex !important}body.nav-open{overflow:hidden !important;position:fixed !important;width:100% !important}.nav a{font-size:1.4rem !important;font-weight:600 !important;padding:1rem 2rem !important;border-radius:12px !important;border:1px solid var(--bd) !important;background:linear-gradient(135deg,var(--panel),var(--panel2)) !important;transition:all 0.3s ease !important;text-align:center !important;width:220px !important;display:block !important;text-decoration:none !important;color:var(--text) !important;transform:translateY(20px) !important;opacity:0 !important}body.nav-open .nav a{animation:slideInUp 0.4s ease forwards !important;opacity:1 !important;transform:translateY(0) !important}body.nav-open .nav a:nth-child(1){animation-delay:0.1s !important}body.nav-open .nav a:nth-child(2){animation-delay:0.2s !important}body.nav-open .nav a:nth-child(3){animation-delay:0.3s !important}body.nav-open .nav a:nth-child(4){animation-delay:0.4s !important}body.nav-open .nav a:nth-child(5){animation-delay:0.5s !important}body.nav-open .nav a:nth-child(6){animation-delay:0.6s !important}@keyframes slideInUp{to{transform:translateY(0) !important;opacity:1 !important}}}
+.h1{font-size:clamp(36px,5.6vw,48px);letter-spacing:-.5px;margin:.5rem 0 .75rem;text-align:center}
+.h2{font-size:clamp(22px,3vw,30px);margin:0 0 10px}
+main{padding-block:30px}
+</style>
+
+<script defer src="/js/mobile-fixed.js"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "assets/lovescape.webp"}</script>
+<script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Clusters", "item": "/clusters/"}]}</script>
+</head><body>
+<header class="header" id="hdr"><div class="container header__in">
+<a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
+<nav class="nav" id="site-nav">
+  <a href="/">Home</a>
+  <a href="/reviews/">Reviews</a>
+  <a href="/comparisons/">Comparisons</a>
+  <a href="/clusters/">Clusters</a>
+  <a href="/guides/">Guides</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</div></header>
+<div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
+
+<main class="container">
+  <h1 class="h1">Browse clusters</h1>
+
+  <div class="cluster-grid">
+    <article class="cluster-item">
+      <h3>SFW Companions</h3>
+      <p>Gentle daily talk & wellness</p>
+      <p><a class="btn ghost" href="/clusters/sfw/">Open</a></p>
+    </article>
+    
+    <article class="cluster-item">
+      <h3>NSFW Roleplay</h3>
+      <p>Unfiltered, adults‑only</p>
+      <p><a class="btn ghost" href="/clusters/nsfw/">Open</a></p>
+    </article>
+    
+    <article class="cluster-item">
+      <h3>Voice‑enabled</h3>
+      <p>Natural voice chats</p>
+      <p><a class="btn ghost" href="/clusters/voice/">Open</a></p>
+    </article>
+    
+    <article class="cluster-item">
+      <h3>Best on Mobile</h3>
+      <p>iOS & Android leaders</p>
+      <p><a class="btn ghost" href="/clusters/mobile/">Open</a></p>
+    </article>
+    
+    <article class="cluster-item">
+      <h3>Free Plans</h3>
+      <p>Start without paying</p>
+      <p><a class="btn ghost" href="/clusters/free/">Open</a></p>
+    </article>
+  </div>
+
+  <section class="section card">
+    <h2 class="h2">Clusters — SEO overview</h2>
+    <p>Navigate by use‑case: SFW for gentle companionship, NSFW for adults‑only roleplay, Voice for real‑time calls, Mobile for iOS/Android strengths, Free to start without paying.</p>
+  </section>
+</main>
+
+<!-- Load remaining non-critical CSS after page load -->
+<script>
+window.addEventListener('load',()=>{
+  const stylesheets = [
+    '/css/aihub.v8.patch.css'
+  ];
+  
+  stylesheets.forEach((href, i) => {
+    setTimeout(() => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = href;
+      document.head.appendChild(link);
+    }, i * 100);
+  });
+});
+</script>
+<script defer src="/js/aihub.v8.enhance.js"></script>
+</body></html>

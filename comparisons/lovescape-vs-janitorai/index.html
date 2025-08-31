@@ -1,0 +1,383 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lovescape vs JanitorAI — Which AI Companion Is Better for Roleplay?</title>
+<meta name="description" content="Compare Lovescape’s premium roleplay (memory, voice, SFW/NSFW controls) with JanitorAI’s free UI, API-key setup, and unfiltered community. See pros/cons and verdict."/>
+
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/mobile-fixed.css"/>
+<link rel="stylesheet" href="/css/comparisons-enhanced.css"/>
+<link rel="stylesheet" href="/css/comparison-detail-enhanced.css"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "AI Review Hub", "url": "https://example.com/", "logo": "/assets/lovescape.webp"}</script><script type='application/ld+json'>{"@context": "https://schema.org", "@type": "WebPage", "name": "Lovescape vs JanitorAI \u2014 Detailed Comparison"}</script><script type='application/ld+json'>{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/"}, {"@type": "ListItem", "position": 2, "name": "Comparisons", "item": "/comparisons/"}, {"@type": "ListItem", "position": 3, "name": "Lovescape Vs JanitorAI", "item": "/comparisons/lovescape-vs-janitorai/"}]}</script>
+  
+
+<!-- Enhanced mobile navigation script -->
+<script>
+(function() {
+  'use strict';
+  
+  function initMobileNav() {
+    console.log('Initializing mobile navigation...');
+    
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+    
+    if (!navToggle) {
+      console.error('Nav toggle not found');
+      return;
+    }
+    
+    if (!nav) {
+      console.error('Nav element not found');
+      return;
+    }
+
+    console.log('Nav elements found, setting up handlers...');
+
+    // Remove any existing event listeners
+    navToggle.replaceWith(navToggle.cloneNode(true));
+    const newNavToggle = document.querySelector('.nav-toggle');
+
+    function toggleMenu(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      console.log('Toggle menu clicked');
+      
+      const isOpen = body.classList.contains('nav-open');
+      console.log('Menu currently open:', isOpen);
+      
+      if (isOpen) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+        console.log('Menu closed');
+      } else {
+        body.classList.add('nav-open');
+        nav.classList.add('nav-open');
+        newNavToggle.classList.add('active');
+        newNavToggle.setAttribute('aria-expanded', 'true');
+        console.log('Menu opened');
+      }
+    }
+
+    // Add click handler
+    newNavToggle.addEventListener('click', toggleMenu);
+    newNavToggle.addEventListener('touchstart', toggleMenu);
+
+    // Close on nav link click
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+        console.log('Menu closed via link click');
+      });
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+        body.classList.remove('nav-open');
+        nav.classList.remove('nav-open');
+        newNavToggle.classList.remove('active');
+        newNavToggle.setAttribute('aria-expanded', 'false');
+        console.log('Menu closed via Escape key');
+      }
+    });
+    
+    console.log('Mobile navigation initialized successfully');
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileNav);
+  } else {
+    setTimeout(initMobileNav, 100);
+  }
+})();
+</script>
+
+<!-- Force mobile navigation CSS -->
+<style>
+@media (max-width: 980px) {
+  .nav {
+    display: none !important;
+  }
+  
+  .nav-toggle {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: none !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    z-index: 10001 !important;
+  }
+  
+  .burger-line {
+    display: block !important;
+    width: 24px !important;
+    height: 2px !important;
+    background: var(--text) !important;
+    margin: 3px 0 !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .nav.nav-open {
+    display: flex !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(7, 7, 8, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2rem !important;
+    z-index: 10000 !important;
+    padding: 2rem !important;
+  }
+  
+  .nav.nav-open a {
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    padding: 1rem 2rem !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--bd) !important;
+    background: linear-gradient(135deg, var(--panel), var(--panel2)) !important;
+    text-align: center !important;
+    width: 220px !important;
+    display: block !important;
+    text-decoration: none !important;
+    color: var(--text) !important;
+  }
+}
+
+
+</style>
+ 
+</head><body>
+<header class="header" id="hdr"><div class="container header__in">
+<a class="logo" href="/"><i></i><span>AI Review Hub</span></a>
+<button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+  <span class="burger-line"></span>
+</button>
+<nav class="nav" id="site-nav">
+  <a href="/">Home</a>
+  <a href="/reviews/">Reviews</a>
+  <a href="/comparisons/">Comparisons</a>
+  <a href="/clusters/">Clusters</a>
+  <a href="/guides/">Guides</a>
+  <a href="/blog/">Blog</a>
+</nav>
+</div></header>
+<div class="lights" aria-hidden="true"><span class="orb red"></span><span class="orb vio"></span><span class="orb cya"></span><span class="cursor-glow"></span></div>
+
+<main class="comparison-detail container">
+  <h1 class="h1">Lovescape vs JanitorAI — Detailed Comparison</h1>
+  
+  <section class="section card">
+    <h2 class="h2">Editor’s Summary: Lovescape vs JanitorAI</h2>
+    <p>Lovescape vs JanitorAI compares a premium, integrated AI companion built for immersive roleplay with long-term memory, persona/behavior editing, real-time voice, and clear SFW/NSFW toggles against a free front end that relies on user API keys and a community character library. Lovescape prioritizes believable scenes, consistent characterization, and turnkey setup—you sign in, pick or design a character, and start chatting with reliable memory and safety controls. JanitorAI is flexible and unfiltered, but requires users to configure an API key, choose a model, and manage usage costs with their provider; conversation quality can swing based on prompts, models, and creator skill. If your goal is high-end roleplay with stable memory, voice, and boundaries out of the box, Lovescape is the better long-term companion. If you mainly want a free UI to plug in your own LLM and explore community characters—accepting variable quality and DIY setup—JanitorAI can be fun, but it’s less controlled and more technical.</p>
+    <p>JanitorAI, by contrast, is a DIY, community-driven platform. The UI is free, but you must configure an API key, choose a model, and manage usage costs with your provider. That flexibility is powerful for tinkerers, yet it introduces variance: conversation quality depends on the model, prompt craft, and creator skill behind each character. The community character library is huge and largely unfiltered, which enables edgy or experimental roleplay—but also means variable quality, fewer first-party tools for memory and persona control, and a learning curve that can frustrate newcomers. Heavy chat or large context windows can increase API spend, so “free” becomes conditional on your usage.</p>
+    <p>If your goal is high-end roleplay with stable memory, voice presence, and predictable boundaries, Lovescape is the better long-term companion. It delivers premium AI companion features—coherent multi-scene arcs, reliable persona adherence, and built-in safety—without technical setup. If you primarily want a free UI to plug in your own LLM and explore community characters, and you’re comfortable with DIY configuration and quality swings, JanitorAI can be fun and flexible. For depth, control, and a turnkey experience, the edge goes to Lovescape; for breadth and experimentation, JanitorAI is the more technical, community-first alternative.</p>
+  </section>
+
+  <section class="section split">
+    <div class="card">
+      <div class="kv"><img src="/assets/lovescape.webp" alt="Lovescape Logo"/><h3>Lovescape — Pros</h3></div>
+      <ul><li>Advanced roleplay with consistent memory across long story arcs</li>
+        <li>Persona/behavior editing and boundary tools for precise character control</li>
+        <li>Real-time voice that stays “in character”</li>
+        <li>Clear SFW/NSFW toggles and safety settings for adult users</li>
+        <li>No setup hurdles; all features integrated</li></ul>
+      <h4>Cons</h4><ul><li>Premium pricing; best features in the top plan</li><li>Depth of options can feel complex at first</li></ul>
+    </div>
+    <div class="card">
+      <div class="kv"><img src="/assets/janitorai.webp" alt="JanitorAI Logo"/><h3>JanitorAI — Pros</h3></div>
+      <ul><li>Free front end; pay only your API provider for usage</li><li>Large, unfiltered community library of user-created characters</li><li>Flexible model choice and technical experimentation</li>
+      </ul>
+      <h4>Cons</h4><ul><li>Requires API key setup; more technical onboarding</li><li>Conversation quality varies widely by model and creator</li>
+        <li>Costs can add up with heavy use (provider billing)</li>
+        <li>Fewer first-party tools for memory, persona rules, and safe boundaries</li></ul>
+    </div>
+  </section>
+
+  <section class="section card">
+    <h2 class="h2">Verdict</h2>
+    <div class="verdict">
+      <div>
+        <p class="lead">Choose Lovescape if you want a premium, all-in-one AI companion for deep roleplay, reliable memory, voice, and precise boundaries—with zero setup.
+Pick JanitorAI if you’re technical, enjoy experimenting with models, and want a free front end with an unfiltered community, accepting variable quality and managing API costs.</p>
+        <div class="verdict-meters">
+          <div>Realism <div class="meter"><i style="width:94%"></i></div></div>
+          <div>Value <div class="meter"><i style="width:82%"></i></div></div>
+          <div>Personalization <div class="meter"><i style="width:91%"></i></div></div>
+        </div>
+        <div class="bullets">
+          <div>• Lovescape: immersive roleplay, consistent personas, adult/SFW toggles, turnkey experience.</div>
+          <div>• JanitorAI: tinkerers who want model choice, unfiltered content, and community variety.</div>
+        </div>
+      </div>
+      <div class="radar-container">
+        <h3>Performance Comparison</h3>
+        <!-- Radar chart will be injected here by JavaScript -->
+      </div>
+      <div class="stack">
+        <a class="btn-mini" href="/reviews/lovescape-review/"><img src="/assets/lovescape.webp" alt="Lovescape"/> Read Lovescape review <span class="win">Winner</span></a>
+        <a class="btn-mini" href="/reviews/janitorai-review/"><img src="/assets/janitorai.webp" alt="JanitorAI"/> Read JanitorAI review</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="container"><p>© 2025 AI Review Hub — fast, accessible reviews of AI characters.</p></footer>
+<script>
+// Custom radar chart only - no large logos
+(function(){
+  const categoryLabels = ["Value","Realism","Personalization","Safety","Latency","Voice","NSFW","Privacy"];
+  const brandData = {
+    lovescape: [86,90,88,80,82,70,92,78],
+    "candy-ai": [84,84,86,82,80,75,85,76],
+    "crushon-ai": [82,85,84,75,80,75,95,70],
+    janitorai: [90,82,85,75,78,72,88,72],
+    replika: [80,78,70,85,88,82,55,84],
+    "anima-ai": [78,86,82,80,85,78,80,75],
+    romanticai: [80,80,75,85,82,70,65,80],
+    chatfai: [70,74,72,85,75,65,70,78],
+    "myai-love": [75,78,70,82,80,68,75,76],
+    "ai-dungeon": [72,76,85,80,78,60,85,75]
+  };
+  const BLUE = '#6A7DFF', PINK = '#FF375F';
+
+  function slugToName(slug){
+    const map = {
+      lovescape: 'Lovescape',
+      janitorai: 'JanitorAI',
+      'crushon-ai': 'CrushOn.AI',
+      replika: 'Replika',
+      'candy-ai': 'Candy.AI',
+      anima: 'Anima AI',
+      romanticai: 'RomanticAI',
+      chatfai: 'ChatFAI',
+      'myai-love': 'MyAI.love',
+      'ai-dungeon': 'AI Dungeon'
+    };
+    return map[slug] || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  }
+
+  function drawRadar(canvas, series, categories) {
+    const ctx = canvas.getContext('2d');
+    const DPR = window.devicePixelRatio || 1;
+    const size = 200;
+    canvas.width = size * DPR;
+    canvas.height = size * DPR;
+    canvas.style.width = size + 'px';
+    canvas.style.height = size + 'px';
+    ctx.scale(DPR, DPR);
+    ctx.translate(size/2, size/2);
+    
+    const radius = size/2 - 30;
+    ctx.clearRect(-size/2, -size/2, size, size);
+    
+    // Grid
+    for(let i = 1; i <= 5; i++) {
+      const r = radius * i / 5;
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgba(255,255,255,.08)';
+      ctx.lineWidth = 1;
+      for(let j = 0; j < categories.length; j++) {
+        const angle = (Math.PI * 2 * j / categories.length) - Math.PI/2;
+        const x = Math.cos(angle) * r;
+        const y = Math.sin(angle) * r;
+        j === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.stroke();
+    }
+    
+    // Labels
+    ctx.fillStyle = 'rgba(255,255,255,.8)';
+    ctx.font = '12px system-ui, -apple-system, Segoe UI, Inter, Arial';
+    ctx.textAlign = 'center';
+    categories.forEach((cat, i) => {
+      const angle = (Math.PI * 2 * i / categories.length) - Math.PI/2;
+      const x = Math.cos(angle) * (radius + 15);
+      const y = Math.sin(angle) * (radius + 15);
+      ctx.fillText(cat, x, y + 4);
+    });
+    
+    // Data
+    series.forEach(s => {
+      ctx.beginPath();
+      s.data.forEach((val, i) => {
+        const v = Math.max(0, Math.min(100, val)) / 100;
+        const angle = (Math.PI * 2 * i / categories.length) - Math.PI/2;
+        const x = Math.cos(angle) * (radius * v);
+        const y = Math.sin(angle) * (radius * v);
+        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      });
+      ctx.closePath();
+      ctx.fillStyle = s.fill;
+      ctx.strokeStyle = s.color;
+      ctx.lineWidth = 2;
+      ctx.fill();
+      ctx.stroke();
+    });
+  }
+
+  function addRadarChart() {
+    const path = location.pathname.replace(/\/+$/, '/');
+    if (!/^\/comparisons\/[^\/]+\/$/.test(path)) return;
+
+    const pair = path.match(/\/comparisons\/([^\/]+)-vs-([^\/]+)\//i);
+    if (!pair) return;
+    const s1 = pair[1], s2 = pair[2];
+    const n1 = slugToName(s1), n2 = slugToName(s2);
+
+    const radarContainer = document.querySelector('.radar-container');
+    if (!radarContainer || radarContainer.querySelector('canvas')) return;
+
+    const canvas = document.createElement('canvas');
+    const data1 = brandData[s1] || brandData.lovescape;
+    const data2 = brandData[s2] || brandData.janitorai;
+    
+    const series = [
+      { data: data1, fill: 'rgba(255,53,85,0.2)', color: PINK },
+      { data: data2, fill: 'rgba(106,125,255,0.1)', color: BLUE }
+    ];
+
+    drawRadar(canvas, series, categoryLabels);
+    radarContainer.appendChild(canvas);
+
+    // Add legend
+    const legend = document.createElement('div');
+    legend.className = 'radar-legend';
+    legend.innerHTML = `
+      <span><div class="legend-color" style="background: ${PINK}"></div>${n1}</span>
+      <span><div class="legend-color" style="background: ${BLUE}"></div>${n2}</span>
+    `;
+    radarContainer.appendChild(legend);
+  }
+
+  // Initialize after DOM loads
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', addRadarChart);
+  } else {
+    addRadarChart();
+  }
+})();
+</script>
+</body></html>

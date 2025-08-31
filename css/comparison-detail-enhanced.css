@@ -1,0 +1,811 @@
+/* Enhanced Individual Comparison Page Styling */
+
+/* Main container */
+/* Main container */
+.comparison-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensure all sections are centered */
+.comparison-detail .section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: block;
+}
+
+/* Center the content within cards */
+.comparison-detail .section.card {
+  text-align: center;
+}
+
+/* Center the split section (comparison cards) */
+.comparison-detail .section.split {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* allow inner grid to take full width, outer .section handles max-width */
+.comparison-detail .split {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+/* Enhanced title */
+.comparison-detail .h1 {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--r), var(--v));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Center all sections */
+.section {
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+
+.section.card {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+/* Center the main title */
+.comparison-detail .h1 {
+  text-align: center;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+
+/* Enhanced split section - Logo comparison */
+.section.split {
+  margin: 3rem auto;           /* was: 3rem 0 */
+  max-width: 1100px;           /* new: wider container for cards */
+  position: relative;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;                   /* increased gap for better spacing */
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Enhanced comparison cards - larger and more prominent */
+.split .card {
+  background: linear-gradient(135deg, 
+    rgba(11, 12, 14, 0.95) 0%, 
+    rgba(15, 17, 19, 0.95) 100%);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 24px;
+  padding: 40px 32px;          /* increased from 32px 24px */
+  min-height: 320px;           /* ensure consistent visual weight */
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Card hover effects */
+.split .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 8px 20px rgba(255, 53, 85, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Remove VS badge from split section to prevent overlapping */
+.split::before {
+  display: none;
+}
+
+/* Enhanced KV (Key-Value) section with logos/titles larger */
+.kv {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;         /* was: 24px */
+  padding-bottom: 20px;        /* was: 16px */
+  border-bottom: 1px solid var(--bd);
+}
+
+/* Make first card logo align left */
+.split .card:first-child .kv {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+/* Make second card logo align right with content order reversed */
+.split .card:last-child .kv {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  gap: 12px;
+}
+
+.kv img {
+  width: 48px !important;      /* was: 40px */
+  height: 48px !important;     /* was: 40px */
+  border-radius: 12px;         /* was: 10px */
+  border: 2px solid var(--bd);
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.kv:hover img {
+  border-color: var(--r);
+  transform: scale(1.05);
+}
+
+.kv h3 {
+  margin: 0;
+  font-size: 1.5rem;           /* was: 1.3rem */
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+  text-align: left;
+}
+
+/* Right-aligned text for second card */
+.split .card:last-child .kv h3 {
+  text-align: right;
+}
+
+/* Enhanced lists - larger spacing and font size */
+.split .card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;          /* was: 24px */
+}
+
+.split .card li {
+  padding: 12px 0;             /* was: 8px 0 */
+  padding-left: 32px;          /* was: 24px */
+  position: relative;
+  color: var(--text);
+  font-size: 1.05rem;          /* was: 0.95rem */
+  line-height: 1.6;            /* was: 1.5 */
+}
+
+.split .card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 12px;                   /* was: 8px */
+  color: #22c55e;
+  font-weight: bold;
+  font-size: 1.1rem;           /* was: 1rem */
+}
+
+/* Cons section */
+.split .card h4 {
+  margin: 32px 0 16px 0;       /* was: 24px 0 12px 0 */
+  font-size: 1.2rem;           /* was: 1.1rem */
+  color: var(--text);
+  font-weight: 600;
+  border-top: 1px solid var(--bd);
+  padding-top: 20px;           /* was: 16px */
+}
+
+.split .card h4 + ul li::before {
+  content: '✗';
+  color: #ef4444;
+  font-size: 1.1rem;           /* increased for balance with pros */
+}
+
+/* Enhanced Verdict Section */
+.section.card {
+  background: linear-gradient(135deg, 
+    rgba(11, 12, 14, 0.95) 0%, 
+    rgba(15, 17, 19, 0.95) 100%);
+  border: 1px solid var(--bd);
+  border-radius: 24px;
+  padding: 40px 32px;
+  margin: 3rem 0;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.section.card .h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+  font-size: 1.8rem;
+}
+
+/* Enhanced Verdict Layout - Three columns: text, radar, buttons */
+.verdict {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.verdict > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.verdict .lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Compact radar chart styling */
+.radar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--bd);
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 250px;
+  justify-content: center;
+}
+
+.radar-container canvas {
+  max-width: 200px !important;
+  max-height: 200px !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.radar-container h3 {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  color: var(--text);
+  text-align: center;
+}
+
+/* Compact legend for radar chart */
+.radar-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+.radar-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.radar-legend .legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Compact meters section */
+.verdict-meters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Enhanced meters - more compact */
+.verdict-meters > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.meter {
+  height: 6px;
+  background: #17191c;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--bd);
+  width: 120px;
+  margin-left: 12px;
+}
+
+.meter > i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--r), var(--v));
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+/* Enhanced bullets */
+.bullets {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--bd);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 8px;
+}
+
+.bullets > div {
+  padding: 4px 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.bullets > div:first-child {
+  color: #22c55e;
+}
+
+.bullets > div:last-child {
+  color: #3b82f6;
+}
+
+/* Enhanced button stack */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: start;
+}
+
+.btn-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--bd);
+  background: linear-gradient(135deg, rgba(11, 12, 14, 0.8), rgba(15, 17, 19, 0.8));
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-mini::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--r), var(--v));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-mini:hover {
+  border-color: var(--r);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 53, 85, 0.3);
+}
+
+.btn-mini:hover::before {
+  opacity: 0.1;
+}
+
+.btn-mini img {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px;
+  border: 1px solid var(--bd);
+  flex-shrink: 0;
+}
+
+.win {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: auto;
+}
+
+/* Responsive adjustments for better proportions */
+@media (min-width: 1200px) {
+  .section.split {
+    max-width: 1200px;
+  }
+  
+  .split {
+    gap: 48px;
+  }
+  
+  .split .card {
+    padding: 48px 40px;
+    min-height: 360px;
+  }
+}
+
+/* Mobile Responsiveness - Fixed for better readability */
+@media (max-width: 768px) {
+  .comparison-detail {
+    padding: 0 16px;
+  }
+  
+  /* Reduce spacing between sections by 50% */
+  .comparison-detail .section {
+    margin: 1rem auto; /* Reduced from 2rem */
+  }
+  
+  .section {
+    margin: 1.5rem auto; /* Reduced from 3rem */
+  }
+  
+  .section.card {
+    margin: 1.5rem auto; /* Reduced from 3rem */
+  }
+  
+  .section.split {
+    margin: 1.5rem auto; /* Reduced from 3rem */
+  }
+  
+  /* Fix comparison cards for mobile readability */
+  .split {
+    grid-template-columns: 1fr;
+    gap: 20px; /* Reduced gap */
+    position: relative;
+  }
+  
+  /* Make cards more readable on mobile */
+  .split .card {
+    padding: 24px 20px; /* More reasonable padding */
+    min-height: auto; /* Remove fixed height */
+  }
+  
+  /* Reset logo positioning for mobile - make them both left-aligned */
+  .split .card:last-child .kv {
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 12px;
+  }
+  
+  .split .card:last-child .kv h3 {
+    text-align: left;
+  }
+  
+  /* Better mobile logo sizing */
+  .kv {
+    gap: 12px;
+    margin-bottom: 20px; /* Reduced from 24px */
+    padding-bottom: 12px; /* Reduced from 16px */
+  }
+  
+  .kv img {
+    width: 36px !important; /* Smaller for mobile */
+    height: 36px !important;
+  }
+  
+  .kv h3 {
+    font-size: 1.2rem; /* More readable size */
+  }
+  
+  /* Better mobile text sizing */
+  .split .card li {
+    font-size: 0.95rem; /* Better mobile readability */
+    padding: 8px 0;
+    padding-left: 24px;
+    line-height: 1.5;
+  }
+  
+  .split .card h4 {
+    margin: 20px 0 12px 0; /* Reduced spacing */
+    font-size: 1.1rem;
+    padding-top: 12px; /* Reduced padding */
+  }
+  
+  /* Fix verdict section for mobile */
+  .verdict {
+    grid-template-columns: 1fr;
+    gap: 16px; /* Reduced from 20px */
+  }
+  
+  .radar-container {
+    order: 1;
+    min-height: 160px; /* Reduced height */
+    padding: 12px; /* Reduced padding */
+  }
+  
+  .radar-container canvas {
+    max-width: 140px !important; /* Smaller for mobile */
+    max-height: 140px !important;
+  }
+  
+  .radar-container h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px; /* Reduced margin */
+  }
+  
+  .radar-legend {
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+  }
+  
+  .stack {
+    order: 2;
+  }
+  
+  .section.card {
+    padding: 24px 20px; /* Reduced from 32px 24px */
+  }
+  
+  .section.card .h2 {
+    font-size: 1.5rem; /* Reduced title size */
+    margin-bottom: 1.5rem; /* Reduced margin */
+  }
+  
+  .verdict-meters {
+    padding: 12px; /* Reduced padding */
+  }
+  
+  .verdict .lead {
+    font-size: 1rem; /* Better mobile readability */
+    line-height: 1.5;
+  }
+  
+  .meter {
+    width: 80px; /* Smaller meters for mobile */
+  }
+  
+  .btn-mini {
+    padding: 12px 14px; /* Reduced padding */
+    font-size: 0.85rem;
+  }
+  
+  .btn-mini img {
+    width: 24px !important; /* Smaller button images */
+    height: 24px !important;
+  }
+  
+  /* Better bullets spacing */
+  .bullets {
+    padding: 16px; /* Reduced padding */
+    margin-top: 12px; /* Reduced margin */
+  }
+  
+  .bullets > div {
+    padding: 3px 0; /* Reduced padding */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-detail .h1 {
+    font-size: 1.4rem; /* More reasonable mobile title */
+    margin-bottom: 1rem; /* Reduced margin */
+  }
+  
+  /* Further reduce spacing on small screens */
+  .comparison-detail .section {
+    margin: 0.75rem auto;
+  }
+  
+  .split .card {
+    padding: 20px 16px; /* Even more compact */
+  }
+  
+  .section.card {
+    padding: 20px 16px;
+  }
+  
+  .kv h3 {
+    font-size: 1.1rem;
+  }
+  
+  .split .card li {
+    font-size: 0.9rem;
+  }
+  
+  .verdict .lead {
+    font-size: 0.95rem;
+  }
+  
+  .bullets > div {
+    font-size: 0.85rem;
+  }
+}
+.comparison-detail.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 981px) {
+  .comparison-detail.container .section {
+    max-width: 1100px;
+    margin: 1.75rem auto !important;
+  }
+  .comparison-detail.container .section.card,
+  .comparison-detail.container .section.split {
+    margin: 2rem auto !important;
+  }
+  .comparison-detail.container .kv {
+    margin-bottom: 24px !important;
+    padding-bottom: 14px !important;
+  }
+}
+
+.comparison-detail.container .section.split {
+  max-width: 1100px !important;
+}
+
+.comparison-detail.container .split {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr) !important;
+  gap: 32px !important;
+  align-items: stretch !important;
+  width: 100% !important;
+}
+
+.comparison-detail.container .split .card {
+  padding: 36px 28px !important;
+  min-height: 320px;
+}
+
+@media (max-width: 768px) {
+  .comparison-detail.container { padding: 0 16px; }
+
+  .comparison-detail.container .section { margin: 1rem auto !important; }
+  .comparison-detail.container .section.card,
+  .comparison-detail.container .section.split { margin: 1.5rem auto !important; }
+
+  .comparison-detail.container .split {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    position: relative;
+  }
+
+  .comparison-detail.container .split .card {
+    padding: 24px 20px !important;
+    min-height: auto !important;
+  }
+
+  .comparison-detail.container .split .card:last-child .kv {
+    justify-content: flex-start !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+  }
+
+  .comparison-detail.container .split .card:last-child .kv h3 {
+    text-align: left !important;
+  }
+
+  .comparison-detail.container .kv {
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .comparison-detail.container .kv img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .comparison-detail.container .kv h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .comparison-detail.container .split .card li {
+    font-size: 0.95rem !important;
+    padding: 8px 0 !important;
+    padding-left: 24px !important;
+    line-height: 1.5 !important;
+  }
+
+  .comparison-detail.container .split .card h4 {
+    margin: 20px 0 12px !important;
+    font-size: 1.1rem !important;
+    padding-top: 12px !important;
+  }
+
+  .comparison-detail.container .verdict {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .comparison-detail.container .radar-container {
+    order: 1;
+    min-height: 160px !important;
+    padding: 12px !important;
+  }
+
+  .comparison-detail.container .radar-container canvas {
+    max-width: 140px !important;
+    max-height: 140px !important;
+  }
+
+  .comparison-detail.container .radar-container h3 {
+    font-size: 0.9rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .comparison-detail.container .radar-legend {
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+  }
+
+  .comparison-detail.container .stack {
+    order: 2;
+  }
+
+  .comparison-detail.container .section.card {
+    padding: 24px 20px !important;
+  }
+
+  .comparison-detail.container .section.card .h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .comparison-detail.container .verdict-meters {
+    padding: 12px !important;
+  }
+
+  .comparison-detail.container .verdict .lead {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .comparison-detail.container .meter { width: 80px !important; }
+
+  .comparison-detail.container .btn-mini {
+    padding: 12px 14px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .comparison-detail.container .btn-mini img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .comparison-detail.container .bullets {
+    padding: 16px !important;
+    margin-top: 12px !important;
+  }
+
+  .comparison-detail.container .bullets > div {
+    padding: 3px 0 !important;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-detail.container .h1 {
+    font-size: 1.4rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .comparison-detail.container .section { margin: 0.75rem auto !important; }
+  .comparison-detail.container .split .card { padding: 20px 16px !important; }
+  .comparison-detail.container .section.card { padding: 20px 16px !important; }
+  .comparison-detail.container .kv h3 { font-size: 1.1rem !important; }
+  .comparison-detail.container .split .card li { font-size: 0.9rem !important; }
+  .comparison-detail.container .verdict .lead { font-size: 0.95rem !important; }
+  .comparison-detail.container .bullets > div { font-size: 0.85rem !important; }
+}
